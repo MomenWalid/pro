@@ -1,0 +1,416 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f5f9;
+}
+
+:root {
+  --main-color: #2196f3;
+  --main-alt-color: #1787e0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+
+header {
+  background-color: #fff;
+  color: var(--main-color);
+  padding: 10px;
+}
+
+header a {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+header a:hover {
+  background-color: var(--main-alt-color);
+  color: #fff;
+}
+
+/* Header */
+
+/*Start Sign in */
+
+.sign-in,
+.sign-up {
+  padding: 20px;
+}
+
+.sign-in .content,
+.sign-up .content {
+  gap: 30px;
+}
+
+.sign-in .image,
+.sign-up .image {
+  width: 500px;
+  position: relative;
+  animation: topdown 4s linear infinite;
+}
+
+.sign-in .form,
+.sign-up .form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  width: 350px;
+}
+
+.sign-in .form h1,
+.sign-up .form h1 {
+  color: var(--main-color);
+}
+.sign-in .form .forget,
+.sign-up .form .forget {
+  display: block;
+  width: fit-content;
+  margin: 5px auto;
+}
+
+@keyframes topdown {
+  0%,
+  50%,
+  100% {
+    top: 0;
+  }
+  25% {
+    top: -60px;
+  }
+  75% {
+    top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sign-in,
+  .sign-up {
+    margin-top: 0;
+  }
+
+  .sign-in .content,
+  .sign-up .content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sign-in .image,
+  .sign-up .image {
+    width: 250px;
+    animation: leftright 4s linear infinite;
+  }
+
+  @keyframes leftright {
+    0%,
+    50%,
+    100% {
+      left: 0;
+    }
+    25% {
+      left: -35px;
+    }
+    75% {
+      left: 35px;
+    }
+  }
+
+  .sign-in .form,
+  .sign-up .form {
+    width: fit-content;
+  }
+}
+
+/*End Sign in */
+
+/* Start Forget Password */
+.forget-password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+.forget-password .buttons {
+  text-align: end;
+  margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .forget-password {
+    width: 300px;
+    padding: 20px 5px;
+  }
+}
+/* End Forget Password */
+
+/*Start Student Dashboard */
+
+.sidebar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.toggle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  display: none;
+  transition: 0.3s;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+.sidebar li a:hover,
+.sidebar li a.active {
+  background-color: #f6f6f6;
+}
+
+.general img {
+  width: 150px;
+}
+
+.general p {
+  font-weight: bold;
+}
+
+.general .left {
+  margin-right: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.general .right {
+  border-radius: 15px;
+}
+
+.general .right li {
+  padding: 15px 10px;
+  border-bottom: 3px solid #f1f5f9;
+}
+
+.general .right li span:first-child {
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .toggle {
+    display: block;
+  }
+
+  .toggle:hover {
+    left: 250px;
+  }
+
+  .toggle:hover + .sidebar {
+    left: 0;
+    z-index: 10;
+  }
+
+  .sidebar {
+    position: absolute;
+    left: -300px;
+    height: 120vh;
+  }
+
+  .general .left {
+    margin-bottom: 20px;
+  }
+}
+
+/*End Student Dashboard */
+
+/* Start Lessons */
+.lesson {
+  background-color: var(--main-color);
+  position: relative;
+}
+
+.lesson h1 {
+  color: #f4b081;
+}
+
+.lesson .brd {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.lesson .content .box {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.lesson .box::-webkit-scrollbar {
+  width: 5px;
+  background-color: #fff;
+}
+
+.lesson .box::-webkit-scrollbar-thumb {
+  background-color: #075ea6;
+}
+
+.lesson .box::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color);
+}
+.lesson p {
+  color: #fff;
+  margin: 20px 0;
+}
+
+.lesson .content h2 {
+  color: #264376;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.lesson .content span {
+  display: block;
+  height: 250px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+
+.lesson .content .box ul a,
+.lesson .content ul a {
+  display: block;
+  text-align: center;
+  background-color: #ecf1f9;
+  color: #000;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.lesson .content .box ul a:hover,
+.lesson .content ul a:hover {
+  background-color: var(--main-alt-color);
+  color: #fff;
+}
+
+.lesson .menu1 .toggle1,
+.lesson .menu2 .toggle2 {
+  position: absolute;
+  left: 0;
+  width: fit-content;
+  border: none;
+  background-color: #fff;
+  color: var(--main-color);
+  font-size: 20px;
+  padding: 10px;
+  display: none;
+  transition: 0.3s;
+}
+.lesson .menu1 .toggle1 {
+  top: 30%;
+}
+.lesson .menu2 .toggle2 {
+  top: 60%;
+}
+
+@media (max-width: 768px) {
+  .lesson .menu1 .toggle1 {
+    display: block;
+  }
+
+  .lesson .menu1 ul {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    background-color: #fff;
+    height: 100%;
+    width: 150px;
+    padding: 100px 20px 20px;
+    transition: 0.3s;
+    z-index: 1;
+  }
+
+  .lesson .menu1 .toggle1:hover {
+    left: 149px;
+  }
+
+  .lesson .menu1 .toggle1:hover + ul {
+    left: 0;
+  }
+
+  .lesson .menu2 .toggle2 {
+    display: block;
+  }
+
+  .lesson .menu2 ul {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    background-color: #fff;
+    height: 100%;
+    width: 150px;
+    padding: 100px 20px 20px;
+    transition: 0.3s;
+  }
+
+  .lesson .menu2 .toggle2:hover {
+    left: 149px;
+  }
+
+  .lesson .menu2 .toggle2:hover + ul {
+    left: 0;
+  }
+
+  .lesson .content a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+  }
+}
+
+/* End Lessons */

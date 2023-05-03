@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body style=" direction: rtl;">
+
+    <style>
+        .sidebar {
+            right: 0;
+        }
+
+        .toggle {
+            right: 0;
+        }
+
+        .general .left {
+            margin-right: 0;
+        }
+
+        @media (max-width: 767px) {
+            .toggle:hover {
+                right: 250px;
+            }
+
+            .toggle:hover+.sidebar {
+                right: 0;
+            }
+
+            .sidebar {
+                right: -300px;
+            }
+        }
+    </style>
+
+
+    <div class="d-flex">
+
+        <button class="toggle"> <i class="fa-solid fa-chevron-left"></i> </button>
+        <section class="sidebar">
+            <div>
+                <ul>
+                    <li><a class="active" href="#">عام</a></li>
+                    <li><a href="#">الإعدادات</a></li>
+                    <li><a href="#">تغير كلمة السر</a></li>
+                    <li><a href="#">معلومات</a></li>
+                    <li><a href="#">المستوى</a></li>
+                    <li><a href="#">الاشعارات</a></li>
+                    <li><a href="../lesson/lesson-Ar.html">الدروس</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="w-100">
+            <header>
+                <div class="container d-flex align-items-center justify-content-between">
+                    <h1>E-Learning</h1>
+                    <a href="stud-dash.html">English</a>
+                </div>
+            </header>
+
+            <section class="general p-4">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 text-center bg-white p-4 ms-4 left">
+                            <img class="img-fluid mb-3" src="../imgs/avatar.png" alt="">
+                            <p>مؤمن وليد</p>
+                            <p>المستوى 1</p>
+                            <a class="btn btn-primary" href="../auth/sign-in-Ar.html">تسجيل الخروج</a>
+                        </div>
+                        <div class="col-md-7 bg-white p-4 right">
+                            <ul>
+                                <li>
+                                    <span>الأسم الاول : </span>
+                                    مؤمن
+
+                                </li>
+                                <li>
+                                    <span>اسم العائلة : </span>
+                                    وليد
+                                </li>
+                                <li>
+                                    <span>البريد الإلكتروني : </span>
+                                    momenwalid@momen.com
+                                </li>
+                                <li>
+                                    <span>رقم الموبايل : </span>
+                                    012345678910
+                                </li>
+                                <li>
+                                    <span>الجنس : </span>
+                                    ذكر
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-success mt-4">تعديل</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

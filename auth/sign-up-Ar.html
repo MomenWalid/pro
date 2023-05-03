@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body style=" direction: rtl;">
+
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1>E-Learning</h1>
+            <a href="sign-up.html">English</a>
+        </div>
+    </header>
+
+    <div class="sign-up">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center content">
+                <div class="image">
+                    <img src="../imgs/signup.png" class="img-fluid" alt="">
+                </div>
+                <div class="form">
+                    <h1 class="text-center">إنشاء حساب جديد</h1>
+                    <form action="#">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="fname">
+                                <label for="fname" class="form-label mt-3">الأسم الأول: </label>
+                                <input type="text" class="form-control" id="fname" name="fname"
+                                    placeholder="الأسم الأول" required>
+                            </div>
+                            <div class="lname">
+                                <label for="lname" class="form-label mt-3">اسم العائلة:</label>
+                                <input type="text" class="form-control" id="lname" name="lname"
+                                    placeholder="اسم العائلة" required>
+                            </div>
+                        </div>
+                        <label for="nationality" class="form-label mt-3">الجنسية:</label>
+                        <input type="text" class="form-control" id="nationality" name="nationality"
+                            placeholder="الجنسية" required>
+                        <div class="gender mt-3">
+                            <span>الجنس:</span>
+                            <label class="mx-3">
+                                <input type="radio" value="male" name="gender">
+                                ذكر
+                            </label>
+                            <label>
+                                <input type="radio" value="female" name="gender">
+                                انثي
+                            </label>
+                        </div>
+                        <label for="number" class="form-label mt-3">رقم الواتساب</label>
+                        <input type="number" class="form-control" id="number" name="number" placeholder="الرقم"
+                            required>
+                        <label for="email" class="form-label mt-3">البريد الإلكتروني</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="الإيميل" required>
+                        <label for="password" class="form-label mt-3">كلمة السر</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="كلمة السر" required>
+                        <a href="../student/stud-dash-Ar.html" class="btn btn-primary form-control my-3">إنشاء حساب</a>
+                        <p class="pt-3">هل لديك حساب بالفعل ؟ <a href="sign-in-Ar.html">تسجيل الدخول</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

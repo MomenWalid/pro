@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1>E-Learning</h1>
+            <a href="sign-up-Ar.html">العربية</a>
+        </div>
+    </header>
+
+    <div class="sign-up">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center content">
+                <div class="image">
+                    <img src="../imgs/signup.png" class="img-fluid" alt="">
+                </div>
+                <div class="form">
+                    <h1 class="text-center">Sign up</h1>
+                    <form action="#">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="fname">
+                                <label for="fname" class="form-label mt-3">First Name</label>
+                                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name"
+                                    required>
+                            </div>
+                            <div class="lname">
+                                <label for="lname" class="form-label mt-3">Family Name</label>
+                                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name"
+                                    required>
+                            </div>
+                        </div>
+                        <label for="nationality" class="form-label mt-3">Nationality: </label>
+                        <input type="text" class="form-control" id="nationality" name="nationality"
+                            placeholder="Enter your Nationality" required>
+                        <div class="gender mt-3">
+                            <span>Gender:</span>
+                            <label class="mx-3">
+                                <input type="radio" value="male" name="gender">
+                                Male
+                            </label>
+                            <label>
+                                <input type="radio" value="female" name="gender">
+                                Female
+                            </label>
+                        </div>
+                        <label for="number" class="form-label mt-3">What's up Number</label>
+                        <input type="number" class="form-control" id="number" name="number"
+                            placeholder="Enter your Number" required>
+                        <label for="email" class="form-label mt-3">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
+                        <label for="password" class="form-label mt-3">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter your password" required>
+                        <a href="../student/stud-dash.html" class="btn btn-primary form-control my-3">Sign up</a>
+                        <p class="pt-3">Already have an account? <a href="../index.html">Sign in here.</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

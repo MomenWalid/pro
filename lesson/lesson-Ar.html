@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <title>Document</title>
+</head>
+
+<body style="direction: rtl;">
+
+    <style>
+        .lesson .menu1 .toggle1,
+        .lesson .menu2 .toggle2 {
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .lesson .menu1 ul {
+                right: -150px;
+            }
+
+            .lesson .menu2 ul {
+                right: -150px;
+            }
+
+            .lesson .menu1 .toggle1:hover {
+                right: 149px;
+            }
+
+            .lesson .menu1 .toggle1:hover+ul {
+                right: 0;
+            }
+
+            .lesson .menu2 .toggle2:hover {
+                right: 149px;
+            }
+
+            .lesson .menu2 .toggle2:hover+ul {
+                right: 0;
+            }
+        }
+    </style>
+
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1>E-Learning</h1>
+            <a href="lesson.html">English</a>
+        </div>
+    </header>
+
+    <div class="lesson p-5">
+        <div class="container">
+            <h1>مستوى: متقدم ثان</h1>
+            <div class="content">
+                <div class="row">
+
+                    <div class="col-md-10 brd">
+                        <div class="box p-4">
+                            <h2>الدرس الأول</h2>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <span></span>
+                                </div>
+
+                                <div class="col-md-3 menu1">
+                                    <button class="toggle1"><i class="fa-solid fa-chevron-left"></i></button>
+
+                                    <ul>
+                                        <li><a class="mb-3" href="">الأهداف</a></li>
+                                        <li><a class="mb-3" href="">المحتوى</a></li>
+                                        <li><a class="mb-3" href="">المعجم</a></li>
+                                        <li><a class="mb-3" href="">التدريبات</a></li>
+                                        <li><a class="mb-3" href="">أنشطة اثرائيه</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 menu2">
+                        <button class="toggle2"><i class="fa-solid fa-chevron-left"></i></button>
+                        <ul class="teach">
+                            <li><a class="mb-3" href="">الاستماع</a></li>
+                            <li><a class="mb-3" href="">الكتابه</a></li>
+                            <li><a class="mb-3" href="">القراءة</a></li>
+                            <li><a class="mb-3" href="">التحدث</a></li>
+                            <li><a class="mb-3" href=""> القواعد</a></li>
+                            <li><a class="mb-3" href=""> التدريبات الاثرائية</a></li>
+                            <li><a class="mb-3" href=""> التقويم</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

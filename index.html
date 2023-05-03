@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1>E-Learning</h1>
+            <a href="auth/sign-in-Ar.html">العربية</a>
+        </div>
+    </header>
+
+    <div class="sign-in">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center content">
+                <div class="image">
+                    <img src="imgs/signin.png" class="img-fluid" alt="">
+                </div>
+                <div class="form">
+                    <h1 class="text-center">Sign in</h1>
+                    <form action="#">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                            required>
+                        <label for="password" class="form-label mt-4">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter your password" required>
+
+                        <a class="btn btn-primary form-control my-4" href="student/stud-dash.html">Login</a>
+
+                        <a href="auth/forget.html" class="forget">Forgotten password? </a>
+                        <p class="pt-3">Don't have an account ? <a href="auth/sign-up.html">Sign up here.</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
