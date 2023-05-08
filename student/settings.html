@@ -13,21 +13,35 @@
 
 <body>
 
-    <div class="d-flex">
+    <style>
+        .settings img {
+            width: 100px;
+            height: 100px;
+        }
 
+        @media (max-width:767px) {
+
+            .settings .image {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+    <div class="d-flex">
         <button class="toggle"><i class="fa-solid fa-chevron-right"></i></button>
         <section class="sidebar">
             <div>
                 <ul>
                     <li>
-                        <a class="active" href="#">
+                        <a href="stud-dash.html">
                             <i class="fa-solid fa-user"></i>
                             General
                         </a>
                     </li>
                     <li>
-                        <a href="settings.html">
-                            <i class="fa-solid fa-gear"></i>
+                        <a class="active" href="#">
+                            <i class="fa-solid fa-gear fa-spin"></i>
                             Settings
                         </a>
                     </li>
@@ -98,49 +112,59 @@
 
                         <div class="">
                             <a class="mx-3 name" href="">Hello, Mo'men</a>
-                            <a class="lang" href="stud-dash-Ar.html">عربي</a>
+                            <a class="lang" href="settings-Ar.html">عربي</a>
                         </div>
                     </nav>
                 </div>
             </div>
 
-            <section class="general p-4">
-
+            <section class="settings p-4">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 text-center bg-white p-4 me-4 left">
-                            <img class="img-fluid mb-3" src="../imgs/avatar.png" alt="">
-                            <p>Mo'men Walid</p>
-                            <p>Level 1</p>
-                            <a class="btn btn-primary" href="../index.html">Log out</a>
-                        </div>
-                        <div class="col-md-7 bg-white p-4 right">
-                            <ul>
-                                <li>
-                                    <span>First Name : </span>
-                                    Mo'men
 
-                                </li>
-                                <li>
-                                    <span>Last Name : </span>
-                                    Walid
-                                </li>
-                                <li>
-                                    <span>Email : </span>
-                                    momenwalid@momen.com
-                                </li>
-                                <li>
-                                    <span>Phone : </span>
-                                    012345678910
-                                </li>
-                                <li>
-                                    <span>Gender : </span>
-                                    Male
-                                </li>
-                            </ul>
-                            <a href="settings.html" class="btn btn-success mt-4">Edit</a>
+                    <div class="image d-flex align-items-center gap-4">
+                        <img class="img-fluid" src="../imgs/avatar.png" alt="">
+                        <div class="form-group">
+                            <label for="photo" class="btn btn-outline-primary">
+                                Upload New Photo
+                                <input type="file" name="photo" hidden id="photo">
+                            </label>
                         </div>
+                        <button class="btn btn-outline-secondary">
+                            Reset
+                        </button>
                     </div>
+
+
+
+                    <div class="form-group mt-5">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control mb-1" placeholder="Mo'men Walid">
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Mo'men Walid">
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="form-label">E-mail</label>
+                        <input type="text" class="form-control mb-1" placeholder="momenwalid@momen.com">
+                    </div>
+                    <div class="form-group my-3">
+                        <label class="form-label">Phone</label>
+                        <input type="text" class="form-control mb-1" placeholder="012345678910">
+                    </div>
+
+
+                    <div class="buttons mt-4">
+                        <button class="btn btn-primary">
+                            Save Changes
+                        </button>
+
+                        <button class="btn btn-danger">
+                            Cancel
+                        </button>
+                    </div>
+
+
                 </div>
 
             </section>

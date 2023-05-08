@@ -13,12 +13,42 @@
 
 <body style=" direction: rtl;">
 
-    <header>
+    <div class="header  p-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1>E-Learning</h1>
-            <a href="sign-up.html">English</a>
+            <h1>تافل</h1>
+
+            <button class="btn menubar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="d-flex justify-content-between align-items-center">
+                <ul class="d-flex align-items-center">
+                    <li>
+                        <a href="../ar.html">
+                            <i class="fa-solid fa-house fa-beat"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone fa-shake"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-circle-info fa-spin"></i>
+                            مساعدة
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <a class="name mx-2" href="../student/stud-dash-Ar.html">اهلا , Mo'men</a>
+                    <a class="lang" href="sign-up.html">English</a>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
 
     <div class="sign-up">
         <div class="container">
@@ -63,7 +93,7 @@
                         <label for="password" class="form-label mt-3">كلمة السر</label>
                         <input type="password" class="form-control" id="password" name="password"
                             placeholder="كلمة السر" required>
-                        <a href="../student/stud-dash-Ar.html" class="btn btn-primary form-control my-3">إنشاء حساب</a>
+                        <a href="../start/study.html" class="btn btn-primary form-control my-3">إنشاء حساب</a>
                         <p class="pt-3">هل لديك حساب بالفعل ؟ <a href="sign-in-Ar.html">تسجيل الدخول</a></p>
                     </form>
                 </div>
@@ -72,7 +102,8 @@
     </div>
 
 
-
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

@@ -49,19 +49,19 @@
             <div>
                 <ul>
                     <li>
-                        <a class="active" href="#">
+                        <a href="#">
                             <i class="fa-solid fa-user"></i>
                             عام
                         </a>
                     </li>
                     <li>
                         <a href="settings-Ar.html">
-                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-gear "></i>
                             الإعدادات
                         </a>
                     </li>
                     <li>
-                        <a href="change-pass-Ar.html">
+                        <a class="active" href="change-pass-Ar.html">
                             <i class="fa-solid fa-key"></i>
                             تغير كلمة السر
                         </a>
@@ -79,8 +79,6 @@
                         </a>
                     </li>
                     <li>
-
-
                         <a href="#">
                             <i class="fa-solid fa-bell"></i>
                             الاشعارات
@@ -129,49 +127,43 @@
 
                         <div class="d-flex">
                             <a class="mx-3 name" href="">اهلا , Mo'men</a>
-                            <a class="lang" href="stud-dash.html">English</a>
+                            <a class="lang" href="change-pass.html">English</a>
                         </div>
                     </nav>
                 </div>
             </div>
 
-            <section class="general p-4">
+            <section class="change-pass p-4">
 
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 text-center bg-white p-4 ms-4 left">
-                            <img class="img-fluid mb-3" src="../imgs/avatar.png" alt="">
-                            <p>مؤمن وليد</p>
-                            <p>المستوى 1</p>
-                            <a class="btn btn-primary" href="../auth/sign-in-Ar.html">تسجيل الخروج</a>
-                        </div>
-                        <div class="col-md-7 bg-white p-4 right">
-                            <ul>
-                                <li>
-                                    <span>الأسم الاول : </span>
-                                    مؤمن
 
-                                </li>
-                                <li>
-                                    <span>اسم العائلة : </span>
-                                    وليد
-                                </li>
-                                <li>
-                                    <span>البريد الإلكتروني : </span>
-                                    momenwalid@momen.com
-                                </li>
-                                <li>
-                                    <span>رقم الموبايل : </span>
-                                    012345678910
-                                </li>
-                                <li>
-                                    <span>النوع : </span>
-                                    ذكر
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-success mt-4">تعديل</a>
-                        </div>
+                    <div class="form-group">
+                        <label class="form-label">كلمة السر الحالية</label>
+                        <input type="password" class="form-control">
                     </div>
+
+                    <div class="form-group my-4">
+                        <label class="form-label">كلمة السر الجديدة</label>
+                        <input type="password" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">تاكيد كلمة السر</label>
+                        <input type="password" class="form-control">
+                    </div>
+
+
+                    <div class="buttons mt-4">
+                        <button class="btn btn-primary">
+                            حفظ التغيرات
+                        </button>
+
+                        <button class="btn btn-danger">
+                            الغاء
+                        </button>
+                    </div>
+
+
                 </div>
 
             </section>

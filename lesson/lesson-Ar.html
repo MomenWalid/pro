@@ -14,6 +14,17 @@
 <body style="direction: rtl;">
 
     <style>
+        @media (max-width:992px) {
+            .header nav {
+                left: 5%;
+                right: auto;
+            }
+
+            .header nav ul a::after {
+                right: 0;
+            }
+        }
+
         .lesson .menu1 .toggle1,
         .lesson .menu2 .toggle2 {
             right: 0;
@@ -46,12 +57,43 @@
         }
     </style>
 
-    <header>
+    <div class="header  p-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1>E-Learning</h1>
-            <a href="lesson.html">English</a>
+            <h1>تافل</h1>
+
+            <button class="btn menubar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="d-flex justify-content-between align-items-center">
+                <ul class="d-flex align-items-center">
+                    <li>
+                        <a href="../index.html">
+                            <i class="fa-solid fa-house fa-beat"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone fa-shake"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-circle-info fa-spin"></i>
+                            مساعدة
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <a class="name mx-3" href="../student/stud-dash.html">اهلا , Mo'men</a>
+                    <a class="lang" href="lesson.html">English</a>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
+
 
     <div class="lesson p-5">
         <div class="container">
@@ -100,6 +142,8 @@
     </div>
 
 
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

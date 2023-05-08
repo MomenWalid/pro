@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+    <style>
+        body {
+            direction: rtl;
+        }
+
+        .training {
+            font-size: 20px;
+
+        }
+
+        .training ul {
+            list-style: arabic-indic;
+        }
+
+        .training label {
+            display: block;
+        }
+
+        .training input {
+            font-size: 20px;
+        }
+
+        .training input[type='checkbox'],
+        .training input[type='radio'] {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+
+        .dragdrop .drag,
+        .dragdrop .drop {
+            flex-basis: 40%;
+        }
+
+        .dragdrop .back {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        .dragdrop .color {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .back.dropped {
+            color: white;
+        }
+
+        .training a {
+            display: block;
+            font-size: 25px;
+        }
+    </style>
+
+    <div class="training p-5">
+
+        <div class="container">
+            <div class="esay">
+                <h1 class="mt-5">
+                    اسئلة مقالي
+                </h1>
+
+                <ul>
+                    <li>
+                        <div class="form-group mt-5">
+                            <label class="form-label">
+                                ما هي عاصمة مصر ؟
+                            </label>
+                            <input type="text" class="form-control mb-1" placeholder="اكتب الاجابة">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-group mt-5">
+                            <label class="form-label">
+                                ما هي اكبر قارة في العالم
+                            </label>
+                            <input type="text" class="form-control mb-1" placeholder="اكتب الاجابة">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="mcq">
+                <h1 class="mt-5">
+                    اسئلة اختيار متعدد
+                </h1>
+                <ul>
+                    <li>
+                        <div class="mt-5">
+                            <p>
+                                ما هي الكواكب الموجودة في المجموعة الشمسية ؟
+                            </p>
+
+                            <label for="one">
+                                <input type="checkbox" class="ms-2" id="one">
+                                الارض
+                            </label>
+                            <label for="two">
+                                <input type="checkbox" class="ms-2" id="two">
+                                الزهرة
+                            </label>
+                            <label for="three">
+                                <input type="checkbox" class="ms-2" id="three">
+                                المشتري
+                            </label>
+                            <label for="four">
+                                <input type="checkbox" class="ms-2" id="four">
+                                درب التبانة
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mt-5">
+                            <p>
+                                ما هي فصول السنة ؟
+                            </p>
+
+                            <label for="summer">
+                                <input type="checkbox" class="ms-2" id="summer">
+                                صيف
+                            </label>
+                            <label for="dry">
+                                <input type="checkbox" class="ms-2" id="dry">
+                                جاف
+                            </label>
+                            <label for="rain">
+                                <input type="checkbox" class="ms-2" id="rain">
+                                ممطر
+                            </label>
+                            <label for="winter">
+                                <input type="checkbox" class="ms-2" id="winter">
+                                شتاء
+                            </label>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <hr>
+
+            <div class="qa">
+                <h1 class="mt-5">
+                    اسئلة اختيار وحيد
+                </h1>
+                <ul>
+                    <li>
+                        <div class="mt-5">
+                            <p>
+                                كم عدد ايام الاسبوع ؟
+                            </p>
+
+                            <label for="five">
+                                <input type="radio" name="week" class="ms-2" id="five">
+                                5
+                            </label>
+                            <label for="six">
+                                <input type="radio" name="week" class="ms-2" id="six">
+                                6
+                            </label>
+                            <label for="seven">
+                                <input type="radio" name="week" class="ms-2" id="seven">
+                                7
+                            </label>
+                            <label for="eight">
+                                <input type="radio" name="week" class="ms-2" id="eight">
+                                8
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mt-5">
+                            <p>
+                                ما هي اكبر دولة من حيث المساحة ؟
+                            </p>
+
+                            <label for="china">
+                                <input type="radio" name="group1" class="ms-2" id="china">
+                                الصين
+                            </label>
+                            <label for="usa">
+                                <input type="radio" name="group1" class="ms-2" id="usa">
+                                امريكا
+                            </label>
+                            <label for="aus">
+                                <input type="radio" name="group1" class="ms-2" id="aus">
+                                استراليا
+                            </label>
+                            <label for="bar">
+                                <input type="radio" name="group1" class="ms-2" id="bar">
+                                البرازيل
+                            </label>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <hr>
+
+            <div class="tru-false">
+                <h1 class="mt-5">
+                    اسئلة صح و خطأ
+                </h1>
+                <ul>
+                    <li>
+                        <div class="mt-5">
+                            <p>
+                                اللغة العربية بها 28 حرف ؟
+                            </p>
+
+                            <label for="true">
+                                <input type="radio" name="group2" class="ms-2" id="true">
+                                صح
+                            </label>
+                            <label for="false">
+                                <input type="radio" name="group2" class="ms-2" id="false">
+                                خطأ
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mt-5">
+                            <p>
+                                اللغة العربية بها 26 حرف ؟
+                            </p>
+
+                            <label for="true1">
+                                <input type="radio" name="group3" class="ms-2" id="true1">
+                                صح
+                            </label>
+                            <label for="false1">
+                                <input type="radio" name="group3" class="ms-2" id="false1">
+                                خطأ
+                            </label>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+            <hr>
+
+            <div class="match">
+                <h1 class="mt-5">
+                    اسئلة وصل
+                </h1>
+                <ul>
+                    <li>
+                        <div class="mt-5">
+                            <div class="group">
+                                <p style="color:blue;">
+                                    ما هو لون السؤال ؟
+                                </p>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled> اختر اجابة </option>
+                                    <option value="red">احمر</option>
+                                    <option value="green">اخضر</option>
+                                    <option value="blue">ازرق</option>
+                                </select>
+                            </div>
+                            <div class="group my-5">
+                                <p style="color:red;">
+                                    ما هو لون السؤال ؟
+                                </p>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>اختر اجابة </option>
+                                    <option value="red">احمر</option>
+                                    <option value="green">اخضر</option>
+                                    <option value="blue">ازرق</option>
+                                </select>
+                            </div>
+                            <div class="group mb-5">
+                                <p style="color:green;">
+                                    ما هو لون السؤال ؟
+                                </p>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>اختر اجابة </option>
+                                    <option value="red">احمر</option>
+                                    <option value="green">اخضر</option>
+                                    <option value="blue">ازرق</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="mt-5">
+                            <div class="group">
+                                <p>
+                                    ما هي عاصمة مصر ؟
+                                </p>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled> اختر اجابة </option>
+                                    <option value="rid">الرياض</option>
+                                    <option value="cir">القاهرة</option>
+                                    <option value="gaz">الجزائر</option>
+                                </select>
+                            </div>
+                            <div class="group my-5">
+                                <p>
+                                    ما هي عاصمة السعودية ؟
+                                </p>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>اختر اجابة </option>
+                                    <option value="rid">الرياض</option>
+                                    <option value="cir">القاهرة</option>
+                                    <option value="gaz">الجزائر</option>
+                                </select>
+                            </div>
+                            <div class="group mb-5">
+                                <p>
+                                    ما هي عاصمة الجزائر
+                                </p>
+
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>اختر اجابة </option>
+                                    <option value="rid">الرياض</option>
+                                    <option value="cir">القاهرة</option>
+                                    <option value="gaz">الجزائر</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="dragdrop">
+                <h1 class="mt-5">
+                    اسئلة سحب وافلات
+                </h1>
+
+                <ul>
+                    <li>
+                        <p>
+                            ضع الكلام مكان الالوان المناسبة
+                        </p>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="drag">
+                                <div class="color" draggable="true" ondragstart="drag(event)" id="color1">احمر</div>
+                                <div class="color" draggable="true" ondragstart="drag(event)" id="color2">اخضر</div>
+                                <div class="color" draggable="true" ondragstart="drag(event)" id="color3">ازرق</div>
+                            </div>
+
+                            <div class="drop">
+                                <div class="back" style="background-color: blue;" ondrop="drop(event)"
+                                    ondragover="allowDrop(event)" id="back1"></div>
+                                <div class="back" style="background-color: red;" ondrop="drop(event)"
+                                    ondragover="allowDrop(event)" id="back2"></div>
+                                <div class="back" style="background-color: green;" ondrop="drop(event)"
+                                    ondragover="allowDrop(event)" id="back3"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+
+            <a class="btn btn-success mt-5" href="start/letters.html">تاكيد</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            var draggedElement = document.getElementById(data);
+            var targetElement = event.target;
+            if (targetElement.classList.contains("back")) {
+                targetElement.classList.add("dropped");
+                targetElement.innerHTML = draggedElement.innerHTML;
+                draggedElement.setAttribute("draggable", "false");
+                draggedElement.classList.add("dragged");
+            }
+        }
+
+    </script>
+</body>

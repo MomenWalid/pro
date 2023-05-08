@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            direction: rtl;
+        }
+
+        nav h1 {
+            margin-left: 30px;
+        }
+
+        .about-us h1 {
+            text-align: center;
+            height: 100px;
+            font-size: 80px;
+            color: var(--main-alt-color);
+            width: 250px;
+            display: block;
+            margin: 80px auto;
+            overflow: hidden;
+            animation: controller 3s 2s both, blink 0.8s infinite;
+        }
+
+        @keyframes controller {
+            from {
+                width: 0;
+                border-left: 2px solid var(--main-alt-color);
+            }
+
+            to {
+                width: 250px;
+            }
+        }
+
+        @keyframes blink {
+            from {
+                border-left-color: var(--main-alt-color);
+            }
+
+            to {
+                border-left-color: transparent;
+            }
+        }
+
+        .about-us h2 {
+            color: var(--main-color);
+        }
+
+        .about-us .description p {
+            line-height: 1.7;
+            margin-left: 20px;
+        }
+
+        .about-us ul {
+            list-style: disc;
+            margin-left: 30px;
+        }
+
+        .about-us ul li {
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg align-items-center">
+            <h1>تافل</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <ul class="links navbar-nav d-flex align-items-center">
+                    <li>
+                        <a href="../ar.html">الرئيسة</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" class="active">
+                            من نحن
+                        </a>
+                        <ul class="dropdown-menu text-end">
+                            <li><a class="dropdown-item" href="#">نبذة عنا</a></li>
+                            <li><a class="dropdown-item" href="#">الرؤية و الأهداف</a></li>
+                            <li><a class="dropdown-item" href="#">قالو عنا</a></li>
+                            <li><a class="dropdown-item" href="#">احصاءات</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">الدورات</a>
+                        <ul class="dropdown-menu text-end">
+                            <li><a class="dropdown-item" href="#">عن الدورات</a></li>
+                            <li><a class="dropdown-item" href="#">الدورات السابقة</a></li>
+                            <li><a class="dropdown-item" href="#">الدعم الفني</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">الدليل الارشادي لمنصة التدريب</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">المنتجات</a>
+                        <ul class="dropdown-menu text-end">
+                            <li><a class="dropdown-item" href="#">جميع المنتجات</a></li>
+                            <li><a class="dropdown-item" href="#">الألعاب اللغوية</a></li>
+                            <li><a class="dropdown-item" href="#">المعجم العري</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">كيف تتعلم لغة ثانية</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">المركز اللإعلامي</a>
+                        <ul class="dropdown-menu text-end">
+                            <li><a class="dropdown-item" href="#">الأخبار</a></li>
+                            <li><a class="dropdown-item" href="#">المدونه</a></li>
+                            <li><a class="dropdown-item" href="#">الدراسات</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">تواصل معنا</a>
+                        <ul class="dropdown-menu text-end">
+                            <li><a class="dropdown-item" href="#">اتصل بنا</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">الوكلاء الموزعين</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <div class="log mx-2"><a href="../auth/sign-up-Ar.html">تسجيل</a></div>
+                    <div class="ar search ">
+                        <input class="form-control" type="search" placeholder="البحث" />
+                    </div>
+                    <div class="lang mx-2"><a href="about-us.html">English</a></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="about-us p-5">
+        <div class="container">
+            <h1 class="heading">
+                تافل
+            </h1>
+            <div class=" mb-4">
+                <h2 class="mb-2">من نحن ؟</h2>
+                <p>
+                    منصة TAFL منصة رائدة لتعليم اللغة العربية معتمدة طبقًا لمعايير الجودة العالمية في تعليم اللغات
+                    الثانية، توظف أفضل التقنيات الحديثة في المناهج والمواد التعليمية وتطبيقها؛ عبر أفضل مداخل التدريس
+                    وطرائقه وفنياته، من خلال تفعيل الوسائط والتكنولوجيات التعليمية المتقدمة، مستهدفةً مساعدة الدارسين
+                    على الإلمام بالمهارات العربية الأربع؛ استماعًا وتحدثًا وقراءةً وكتابةً في كافة الأغراض التواصلية.
+                </p>
+            </div>
+
+            <div class="courses">
+                <h2>الدورات:</h2>
+                <ul>
+                    <li>دورة إعداد معلم لتدريس اللغة العربية لغير الناطقين بها</li>
+                    <li>دورة طرق تدريس اللغة العربية لغير الناطقين بها (الاستماع-التحدث-القراءة-الكتابة).</li>
+                    <li>دورة إعداد مناهج اللغة العربية للأغراض المختلفة</li>
+                </ul>
+            </div>
+
+            <div class="product">
+                <h2>المنتجات:</h2>
+                <ul>
+                    <li>
+                        برنامج تدريس اللغة العربية لغير الناطقين بها. </li>
+                    <li>
+                        برنامج تدريس اللغة العربية لأغراض دينية. </li>
+                    <li>
+                        برنامج تدريس اللغة العربية لأغراض دبلوماسية </li>
+                    <li>
+                        برنامج تدريس اللغة العربية لأغراض طبية. </li>
+                    <li>
+                        برنامج تدريس اللغة العربية لأغراض تجارية. </li>
+                    <li>
+                        برنامج تدريس اللغة العربية لأغراض سياحية. </li>
+                    <li>
+                        برنامج تدريس اللغة العربية لأغراض إعلامية. </li>
+                    برنامج تدريس اللغة العربية لأغراض عسكرية. </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

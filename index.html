@@ -13,39 +13,914 @@
 
 <body>
 
-    <header>
-        <div class="container d-flex align-items-center justify-content-between">
-            <h1>E-Learning</h1>
-            <a href="auth/sign-in-Ar.html">العربية</a>
-        </div>
-    </header>
+    <div class="home">
 
-    <div class="sign-in">
-        <div class="container">
-            <div class="d-flex align-items-center justify-content-center content">
-                <div class="image">
-                    <img src="imgs/signin.png" class="img-fluid" alt="">
+        <header>
+            <nav class="navbar navbar-expand-lg align-items-center">
+                <h1>TAFL</h1>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    <ul class="links navbar-nav d-flex align-items-center">
+                        <li>
+                            <a class="active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Who We Are
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="about-us/about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Vision and Goals</a></li>
+                                <li><a class="dropdown-item" href="#">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="#">Statistics</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Training Courses</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Courses</a></li>
+                                <li><a class="dropdown-item" href="#">Previous Courses</a></li>
+                                <li><a class="dropdown-item" href="#">Technical Support</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Guidelines for the Training Platform</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Products</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">All Products</a></li>
+                                <li><a class="dropdown-item" href="#">Language Games</a></li>
+                                <li><a class="dropdown-item" href="#">Eda'at Book</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">How To Learn Second Language</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Media Center</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">News</a></li>
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">Our Studies</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Contact US</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Contact with Us</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Agents & Distributors</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center">
+                        <div class="log mx-2">
+                            <a href="auth/sign-up.html">Register</a>
+                        </div>
+                        <div class="search">
+                            <input class="form-control" type="search" placeholder="Search" />
+                        </div>
+                        <div class="lang"><a href="ar.html">العربية</a></div>
+                    </div>
                 </div>
-                <div class="form">
-                    <h1 class="text-center">Sign in</h1>
-                    <form action="#">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
-                            required>
-                        <label for="password" class="form-label mt-4">Password</label>
-                        <input type="password" class="form-control" id="password" name="password"
-                            placeholder="Enter your password" required>
+            </nav>
+        </header>
 
-                        <a class="btn btn-primary form-control my-4" href="student/stud-dash.html">Login</a>
 
-                        <a href="auth/forget.html" class="forget">Forgotten password? </a>
-                        <p class="pt-3">Don't have an account ? <a href="auth/sign-up.html">Sign up here.</a></p>
-                    </form>
+
+        <section class="slider">
+            <div>
+                <div class="container">
+                    <div class="row align-items-center active p-5 ">
+                        <div class="col-md-6">
+                            <img src="imgs/s1.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 text ">
+                            <h1>
+                                Our Agents & Distributors around the world
+                            </h1>
+                            <p>
+                                Arabic For All agents and distributors are global. Look for the closest agent in your
+                                country
+                            </p>
+                            <a href="" class="btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center p-5">
+                        <div class="col-md-6">
+                            <img src="imgs/s3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 text">
+                            <h1>
+                                King Salman Global Academy Prize
+                            </h1>
+                            <p>
+                                "Arabic For All" wins King Salman Global Academy Prize for learning and teaching Arabic
+                                (companies sector)
+                            </p>
+                            <a href="" class="btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center p-5">
+                        <div class="col-md-6 ">
+                            <img src="imgs/s2.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 text">
+                            <h1>
+                                Arabic For All Products
+                            </h1>
+                            <p>
+                                Learn more about Arabic For All specialized products for teaching the Arabic Language to
+                                non-native speakers that answer all teachers' and students' needs
+
+                            </p>
+                            <a href="" class="btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center p-5 ">
+                        <div class="col-md-6 ">
+                            <img src="imgs/s4.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 text">
+                            <h1>
+                                Training Arabic Language Teachers For Non-Native Speakers
+                            </h1>
+                            <p>
+                                The advancement of teaching Arabic to non-native speakers starts with the proper
+                                training of
+                                the
+                                Arabic language teacher
+
+                            </p>
+                            <a href="" class="btn">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="pagination"></div>
                 </div>
             </div>
+
+        </section>
+
+
+        <section class="features">
+            <div>
+                <div class="container">
+                    <div class="section-title text-center mb-5">
+                        <h1>About Arabic For All</h1>
+                        <p>
+                            Our goal is to facilitate the teaching of Arabic language to
+                            non-native speakers through:
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="feat-box col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                            <img src="imgs/s2.png" alt="" />
+                            <h4 class="mb-5 mt-3">Linking</h4>
+                            <p>Linking Arabic Language Institutions Together</p>
+                        </div>
+                        <div class="feat-box col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                            <img src="imgs/f2.jpg" alt="" />
+                            <h4 class="mb-5 mt-3">Technology</h4>
+                            <p>Adapting Modern Technology To Serve Program Activities</p>
+                        </div>
+                        <div class="feat-box col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                            <img src="imgs/f3.png" alt="" />
+                            <h4 class="mb-5 mt-3">Development</h4>
+                            <p>Developing Comprehensive And International Curriculums</p>
+                        </div>
+                        <div class="feat-box col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                            <img src="imgs/f4.ico" alt="" />
+                            <h4 class="mb-5 mt-3">Training</h4>
+                            <p>
+                                Training Non-Native Arabic Teachers To Teach The Arabic Language
+                            </p>
+                        </div>
+                        <div class="feat-box col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                            <img src="imgs/s4.png" alt="" />
+                            <h4 class="mb-5 mt-3">Teaching</h4>
+                            <p>Supporting Arabic Teaching Institutions</p>
+                        </div>
+                        <div class="feat-box col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+                            <img src="imgs/f6.png" alt="" />
+                            <h4 class="mb-5 mt-3">Services</h4>
+                            <p>Producing Television And Radio Programs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="video text-center">
+            <div class="container">
+                <div class="section-title mb-5">
+                    <h1>Introductory Video </h1>
+                </div>
+
+                <iframe width="700" height="415" src="https://www.youtube-nocookie.com/embed/E4J2umZrwng"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </section>
+
+
+        <section class="products">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h1>Arabic For All Products </h1>
+                    <p>Arabic for All produced a number of publications and specialized scientific
+                        series to serve the
+                        Arabic language for non-native speakers </p>
+                </div>
+                <div class="row mt-5">
+                    <div class="box col-lg-4 col-md-12">
+                        <div class="image">
+                            <img class="img-fluid" src="imgs/p1.jpg" alt="">
+                            <p class="description">
+                                The latest integrated series in teaching Arabic to non-native speakers which using the
+                                latest scientific methods and the easiest methods to facilitate teaching the Arabic
+                                language
+                            </p>
+                        </div>
+                        <a href="">Arabic At Your Hands Series</a>
+                    </div>
+                    <div class="box col-lg-4 col-md-12">
+                        <div class="image">
+                            <img class="img-fluid" src="imgs/p2.png" alt="">
+                            <p class="description">
+                                The latest series specialized in Arabic teaching to the non - natives. It is composed by
+                                an
+                                elite of specialized academicians for students at the age of (5-18) years,consists of 12
+                                student’s books with audio materials and 12 teacher’s books
+
+                            </p>
+                        </div>
+                        <a href="">Arabic At Our Children’s Hands Series</a>
+                    </div>
+                    <div class="box col-lg-4 col-md-12">
+                        <div class="image">
+                            <img class="img-fluid" src="imgs/p3.jpg" alt="">
+                            <p class="description">
+                                In addition to the specialized series, Arabic for all has published a number of
+                                publications
+                                in the field of teaching Arabic to non-native speakers, such as as Edaat book, lessons
+                                in
+                                understanding Arabic phonemes, how to learn a second language, Arabic on air, and others
+                            </p>
+                        </div>
+                        <a href="">Other Publications</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="stats">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h1>Statistics</h1>
+                </div>
+                <div class="row text-center">
+                    <div class="box col-lg-4 col-md-6 col-sm-12 text-center">
+                        <span class="number">12</span>
+                        <p class="text">Countries</p>
+                    </div>
+                    <div class="box col-lg-4 col-md-6 col-sm-12 text-center">
+                        <span class="number">3000</span>
+                        <p class="text">AN EDUCATIONAL INSTITUTION USING OUR PUBLICATIONS</p>
+                    </div>
+                    <div class="box col-lg-4 col-md-6 col-sm-12 text-center">
+                        <span class="number">400</span>
+                        <p class="text">Projects</p>
+                    </div>
+                    <div class="box col-lg-4 col-md-6 col-sm-12 text-center">
+                        <span class="number">6960</span>
+                        <p class="text">Training Hourse</p>
+                    </div>
+                    <div class="box col-lg-4 col-md-6 col-sm-12 text-center">
+                        <span class="number">225</span>
+                        <p class="text">Training Courses</p>
+                    </div>
+                    <div class="box col-lg-4 col-md-6 col-sm-12 text-center">
+                        <span class="number">67</span>
+                        <p class="text">scientific Events</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonials ">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h1>Testimonials</h1>
+                </div>
+
+                <div>
+                    <div class="row align-items-center p-5 testimonial active">
+                        <div class="col-md-6 images">
+                            <img src="imgs/testimonials.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 description ">
+                            <p class="caption">
+                                السلام عليكم ورحمة الله وبركاته من أفضل وأشمل مجموعات تعليم اللغة العربية للناطقين
+                                بغيرها
+                                وأنصح
+                                دائما الزملاء وطلاب العلم بأخذها للتدريس والتعلم؛ جزا الله القائمين على هذا العمل خير
+                                الجزاء
+                                وجعله في ميزان حسناتهم عملا خالصا متقبلا. بإذن الله تعالى.
+                            </p>
+                            <div class="test-member d-flex align-items-center justify-content-between">
+                                <div class="info">
+                                    <p class="name">Mo'men Walid</p>
+                                    <span>Egypt</span>
+                                </div>
+                                <div class="image">
+                                    <img src="imgs/team-01.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-5 testimonial">
+                        <div class="col-md-6 images">
+                            <img src="imgs/testimonials.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 description">
+                            <p class="caption">
+                                انصح جميع طلابي باقتناء هذه السلسلة المميزة جزاكم الله خيرا
+
+                            </p>
+                            <div class="test-member d-flex align-items-center justify-content-between">
+                                <div class="info">
+                                    <p class="name">Abeer abo Zead</p>
+                                    <span>Egypt</span>
+                                </div>
+                                <div class="image">
+                                    <img src="imgs/team-02.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-5 testimonial">
+                        <div class="col-md-6 images">
+                            <img src="imgs/testimonials.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 description">
+                            <p class="caption">
+                                هذه المؤسسة تقوم بأعمال رائعة ومجهودات جبارة من أجل نشر ودعم تعليم اللغة العربية في
+                                العالم
+                                ...فلقد لمست ذلك بعدما حضرت دورة برشلونة ٢٠١٥. بارك الله في الاساتذة الكرام وفي القائمين
+                                على
+                                المؤسسة والعاملين فيها جميعا وجزاهم الله عنا خير الجزاء ...وإلى الامام للمزيد من العمل
+                                والانجازات.
+
+                            </p>
+                            <div class="test-member d-flex align-items-center justify-content-between">
+                                <div class="info">
+                                    <p class="name">ZAHRA BELAZZOUGUI
+                                    </p>
+                                    <span>Spain</span>
+                                </div>
+                                <div class="image">
+                                    <img src="imgs/team-05.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-5 testimonial">
+                        <div class="col-md-6 images">
+                            <img src="imgs/testimonials.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 description">
+                            <p class="caption">
+                                منهج تعليمي ممتاز يغطي حوائج كل من يطمح بتعلم أو تعليم لغة القرءان. شكرا على المجهود
+                                الرائع
+                                الذي قمتم به واصلوا العمل لأن هناك الكثير من المسلمين الذين يهتمون بتعلم لغة دينهم لكي
+                                يفهموا معني القرءان الكريم والسنة النبوية الشريفة.
+
+
+                            </p>
+                            <div class="test-member d-flex align-items-center justify-content-between">
+                                <div class="info">
+                                    <p class="name">MOHAMED MAYOW </p>
+                                    <span>Somila</span>
+                                </div>
+                                <div class="image">
+                                    <img src="imgs/team-03.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center p-5 testimonial">
+                        <div class="col-md-6 images">
+                            <img src="imgs/testimonials.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-md-6 description">
+                            <p class="caption">
+                                السلام عليكم ورحمة الله وبركاته من أفضل وأشمل مجموعات تعليم اللغة العربية للناطقين
+                                بغيرها
+                                وأنصح دائما الزملاء وطلاب العلم بأخذها للتدريس والتعلم؛ جزا الله القائمين على هذا العمل
+                                خير
+                                الجزاء وجعله في ميزان حسناتهم عملا خالصا متقبلا. بإذن الله تعالى.
+
+                            </p>
+                            <div class="test-member d-flex align-items-center justify-content-between">
+                                <div class="info">
+                                    <p class="name">NEHAD ELTABLAWY </p>
+                                    <span>Egypt</span>
+                                </div>
+                                <div class="image">
+                                    <img src="imgs/team-04.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination"></div>
+
+        </section>
+
+
+        <section class="partner">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h1>Our partners</h1>
+                </div>
+
+                <div class="row align-items-center box">
+                    <div class="col-md-2">
+                        <img src="imgs/partner-1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-2.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-3.avif" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-4.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-5.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-6.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-6.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-7.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-8.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-9.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-10.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-6.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-6.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-10.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-4.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-8.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-2">
+                        <img src="imgs/partner-7.png" class="img-fluid" alt="">
+                    </div>
+
+        </section>
+
+
+        <section class="contact">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="row mt-5">
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="mb-5">
+                            <h4>INQUIRIES AND QUESTIONS</h4>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-phone"></i>
+                                <span>0123456789</span>
+                            </div>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-envelope"></i>
+                                <span>test@test.com</span>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <h4>SALES DEPARTMENT </h4>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-phone"></i>
+                                <span>9876543210</span>
+                            </div>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-phone"></i>
+                                <span>3344556699</span>
+                            </div>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-envelope"></i>
+                                <span>test11@test.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="mb-5">
+                            <h4>COURSES DEPARTMENT
+                            </h4>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-phone"></i>
+                                <span>0111552233544</span>
+                            </div>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-envelope"></i>
+                                <span>test23@test.com</span>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <h4>COMPLAINTS & SUGGESTIONS</h4>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-envelope"></i>
+                                <span>test200@test.com</span>
+                            </div>
+                            <div class="fs-4">
+                                <i class="icon fa-solid fa-phone"></i>
+                                <span>987654</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <form>
+                            <input type="text" name="username" placeholder="Your Name">
+                            <input type="number" name="phone" placeholder="Your Phone">
+                            <input type="email" name="email" placeholder="Your email">
+                            <input type="text" name="subject" placeholder="Subject">
+                            <textarea placeholder="Your Message"></textarea>
+                            <input type="submit" value="Send">
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <h4 class="fs-5">SUBSCRIBE TO THE MAILING LIST </h4>
+                    <div class="subscribe d-flex align-items-center mt-5">
+                        <input class="email" type="email" placeholder="Email">
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="news">
+            <div class="container">
+                <div class="section-title text-center mb-5">
+                    <h1>Latest News</h1>
+                </div>
+
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row p-3">
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-05.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-02-02 15:47:16 </div>
+                                        <div class="heading">
+                                            <a href="">His Highness Prince Dr. Mamdouh Bin Saud Bin Thunayan And His
+                                                Eminence Sheikh
+                                                Abdullah Bin Suleiman Al-Manea Isit Arabic For All HQ</a>
+                                        </div>
+                                        <p>
+                                            His Highness Prince Dr. Mamdouh bin Saud bin Thunayan, President of the
+                                            Islamic
+                                            University
+                                            of
+                                            Madinah, and His Eminence Sheikh...
+                                        </p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-06.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-03-29 16:08:39 </div>
+                                        <div class="heading">
+                                            <a href="">Arabic For All Participates In The Muscat International Book Fair
+                                                2023</a>
+
+                                        </div>
+                                        <p>
+                                            Arabic For All participated in the Muscat International Book Fair, from 22
+                                            February - 4
+                                            March
+                                            2023....</p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-08.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-04-03 16:00:08
+                                        </div>
+                                        <div class="heading">
+                                            <a href="">ARABIC FOR ALL HOLD THE ANNUAL Ceremony FOR THE YEAR 2023</a>
+                                        </div>
+                                        <p>
+                                            Arabic For All held The annual ceremony in Ramadan 1444 AH -2023-...
+                                        </p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row p-3">
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-06.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-03-29 16:08:39 </div>
+                                        <div class="heading">
+                                            <a href="">Arabic For All Participates In The Muscat International Book Fair
+                                                2023</a>
+
+                                        </div>
+                                        <p>
+                                            Arabic For All participated in the Muscat International Book Fair, from 22
+                                            February - 4
+                                            March
+                                            2023....</p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-08.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-04-03 16:00:08
+                                        </div>
+                                        <div class="heading">
+                                            <a href="">ARABIC FOR ALL HOLD THE ANNUAL Ceremony FOR THE YEAR 2023</a>
+                                        </div>
+                                        <p>
+                                            Arabic For All held The annual ceremony in Ramadan 1444 AH -2023-...
+                                        </p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-05.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-02-02 15:47:16 </div>
+                                        <div class="heading">
+                                            <a href="">His Highness Prince Dr. Mamdouh Bin Saud Bin Thunayan And His
+                                                Eminence Sheikh
+                                                Abdullah Bin Suleiman Al-Manea Isit Arabic For All HQ</a>
+                                        </div>
+                                        <p>
+                                            His Highness Prince Dr. Mamdouh bin Saud bin Thunayan, President of the
+                                            Islamic
+                                            University
+                                            of
+                                            Madinah, and His Eminence Sheikh...
+                                        </p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row p-3">
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-08.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-04-03 16:00:08
+                                        </div>
+                                        <div class="heading">
+                                            <a href="">ARABIC FOR ALL HOLD THE ANNUAL Ceremony FOR THE YEAR 2023</a>
+                                        </div>
+                                        <p>
+                                            Arabic For All held The annual ceremony in Ramadan 1444 AH -2023-...
+                                        </p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-05.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-02-02 15:47:16 </div>
+                                        <div class="heading">
+                                            <a href="">His Highness Prince Dr. Mamdouh Bin Saud Bin Thunayan And His
+                                                Eminence Sheikh
+                                                Abdullah Bin Suleiman Al-Manea Isit Arabic For All HQ</a>
+                                        </div>
+                                        <p>
+                                            His Highness Prince Dr. Mamdouh bin Saud bin Thunayan, President of the
+                                            Islamic
+                                            University
+                                            of
+                                            Madinah, and His Eminence Sheikh...
+                                        </p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 box">
+                                    <div class="image">
+                                        <img src="imgs/work-06.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="p-4 bg-white info">
+                                        <div class="date">2023-03-29 16:08:39 </div>
+                                        <div class="heading">
+                                            <a href="">Arabic For All Participates In The Muscat International Book Fair
+                                                2023</a>
+                                        </div>
+                                        <p>
+                                            Arabic For All participated in the Muscat International Book Fair, from 22
+                                            February - 4
+                                            March
+                                            2023....</p>
+                                        <a href="" class="d-flex align-items-center">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                            <span class="mx-2">READ MORE</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <h4>Departments</h4>
+                        <ul>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Board of Directors</a></li>
+                            <li><a href="">Vision and Goals</a></li>
+                            <li><a href="">Agents &amp; Distributors</a></li>
+                            <li><a href="">Scientific Efforts</a></li>
+                            <li><a href="">Blogs</a></li>
+                            <li><a href="">Previous Courses</a></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Quick links</h4>
+                        <ul>
+                            <li><a href="">Arabic At Your Hands Series</a>
+                            </li>
+                            <li><a href="">Arabic At Our Children’s hands Series</a>
+                            </li>
+                            <li><a href="">Audio Of Arabic At Your Hands Series</a>
+                            </li>
+                            <li><a href="">Audio Of Arabic At Our Children’s hands Series</a>
+                            </li>
+                            <li><a href="">Power Point Presentations</a>
+                            </li>
+                            <li><a href="">Teacher Test</a>
+                            </li>
+                            <li><a href="">Student Test</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <h4>Contact with Us</h4>
+                            <ul>
+                                <li><a href="">Inquiries and Questions</a>
+                                </li>
+                                <li><a href="">Courses Department</a>
+                                </li>
+                                <li><a href="">Sales Department</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="icons">
+                                <h4 class="mt-5">Contact Us</h4>
+                                <ul class="d-flex align-items-center mb-3">
+                                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                </ul>
+
+                                <ul class=" d-flex align-items-center">
+                                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="foot text-center p-2">
+            <p>Created By Mo'men Walid</p>
         </div>
+
+
+        <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
+
     </div>
 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

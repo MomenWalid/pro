@@ -13,12 +13,43 @@
 
 <body>
 
-    <header>
+    <div class="header  p-3">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1>E-Learning</h1>
-            <a href="sign-up-Ar.html">العربية</a>
+            <h1>TAFL</h1>
+
+            <button class="btn menubar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="d-flex justify-content-between align-items-center">
+                <ul class="d-flex align-items-center">
+                    <li>
+                        <a href="../index.html">
+                            <i class="fa-solid fa-house fa-beat"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone-flip fa-shake"></i>
+                            Contact Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-circle-info fa-spin"></i>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="">
+                    <a class="mx-3 name" href="../student/stud-dash.html">Hello, Mo'men</a>
+                    <a class="lang" href="sign-up-Ar.html">عربي</a>
+                </div>
+            </nav>
         </div>
-    </header>
+    </div>
 
     <div class="sign-up">
         <div class="container">
@@ -64,7 +95,7 @@
                         <label for="password" class="form-label mt-3">Password</label>
                         <input type="password" class="form-control" id="password" name="password"
                             placeholder="Enter your password" required>
-                        <a href="../student/stud-dash.html" class="btn btn-primary form-control my-3">Sign up</a>
+                        <a href="../start/study.html" class="btn btn-primary form-control my-3">Sign up</a>
                         <p class="pt-3">Already have an account? <a href="../index.html">Sign in here.</a></p>
                     </form>
                 </div>
@@ -72,7 +103,8 @@
         </div>
     </div>
 
-
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

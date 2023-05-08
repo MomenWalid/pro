@@ -13,6 +13,13 @@
 
 <body>
 
+    <style>
+        .info textarea {
+            height: 150px;
+            resize: none;
+        }
+    </style>
+
     <div class="d-flex">
 
         <button class="toggle"><i class="fa-solid fa-chevron-right"></i></button>
@@ -20,7 +27,7 @@
             <div>
                 <ul>
                     <li>
-                        <a class="active" href="#">
+                        <a href="stud-dash.html">
                             <i class="fa-solid fa-user"></i>
                             General
                         </a>
@@ -38,7 +45,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="info.html">
+                        <a class="active" href="#">
                             <i class="fa-solid fa-address-card"></i>
                             Info
                         </a>
@@ -98,49 +105,42 @@
 
                         <div class="">
                             <a class="mx-3 name" href="">Hello, Mo'men</a>
-                            <a class="lang" href="stud-dash-Ar.html">عربي</a>
+                            <a class="lang" href="info-Ar.html">عربي</a>
                         </div>
                     </nav>
                 </div>
             </div>
 
-            <section class="general p-4">
-
+            <section class="info p-4">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 text-center bg-white p-4 me-4 left">
-                            <img class="img-fluid mb-3" src="../imgs/avatar.png" alt="">
-                            <p>Mo'men Walid</p>
-                            <p>Level 1</p>
-                            <a class="btn btn-primary" href="../index.html">Log out</a>
-                        </div>
-                        <div class="col-md-7 bg-white p-4 right">
-                            <ul>
-                                <li>
-                                    <span>First Name : </span>
-                                    Mo'men
 
-                                </li>
-                                <li>
-                                    <span>Last Name : </span>
-                                    Walid
-                                </li>
-                                <li>
-                                    <span>Email : </span>
-                                    momenwalid@momen.com
-                                </li>
-                                <li>
-                                    <span>Phone : </span>
-                                    012345678910
-                                </li>
-                                <li>
-                                    <span>Gender : </span>
-                                    Male
-                                </li>
-                            </ul>
-                            <a href="settings.html" class="btn btn-success mt-4">Edit</a>
-                        </div>
+                    <div class="form-group">
+                        <label class="form-label">Bio</label>
+                        <textarea name="" class="form-control">
+
+                        </textarea>
                     </div>
+
+                    <div class="form-group my-4">
+                        <label class="form-label">Birthday</label>
+                        <input type="date" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Country</label>
+                        <input type="password" class="form-control">
+                    </div>
+
+                    <div class="buttons mt-4">
+                        <button class="btn btn-primary">
+                            Save Changes
+                        </button>
+
+                        <button class="btn btn-danger">
+                            Cancel
+                        </button>
+                    </div>
+
                 </div>
 
             </section>
