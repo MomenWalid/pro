@@ -19,7 +19,7 @@
         }
 
         .training {
-            font-size: 20px;
+            font-size: 25px;
 
         }
 
@@ -27,19 +27,39 @@
             list-style: arabic-indic;
         }
 
+        .training li {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+        }
+
         .training label {
             display: block;
         }
 
         .training input {
-            font-size: 20px;
+            font-size: 25px;
+        }
+
+        .form-select {
+            font-size: 25px;
         }
 
         .training input[type='checkbox'],
         .training input[type='radio'] {
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
+        }
+
+        .training .true-false .right {
+
+            color: #008000;
+        }
+
+        .training .true-false .wrong {
+            color: #ff0000;
         }
 
 
@@ -54,6 +74,8 @@
             border: 1px solid black;
             background-color: lightgray;
             text-align: center;
+            width: 100%;
+            height: 60px;
         }
 
         .dragdrop .color {
@@ -63,6 +85,8 @@
             background-color: white;
             text-align: center;
             cursor: pointer;
+            width: 100%;
+            height: 60px;
         }
 
         .back.dropped {
@@ -76,41 +100,57 @@
     </style>
 
     <div class="training p-5">
-
         <div class="container">
-            <div class="esay">
+
+            <div class="esay ">
                 <h1 class="mt-5">
                     اسئلة مقالي
                 </h1>
 
                 <ul>
                     <li>
-                        <div class="form-group mt-5">
+                        <div id="q1" class="form-group">
                             <label class="form-label">
                                 ما هي عاصمة مصر ؟
                             </label>
                             <input type="text" class="form-control mb-1" placeholder="اكتب الاجابة">
+
+                            <button class="btn btn-primary mt-4 fs-5">
+                                تاكيد الاجابة
+                            </button>
+
+                            <p class="fs-5 mt-2"> </p>
+
                         </div>
+
                     </li>
                     <li>
-                        <div class="form-group mt-5">
+                        <div id="q2" class="form-group">
                             <label class="form-label">
                                 ما هي اكبر قارة في العالم
                             </label>
                             <input type="text" class="form-control mb-1" placeholder="اكتب الاجابة">
+
+
+                            <button class="btn btn-primary mt-4  fs-5">
+                                تاكيد الاجابة
+                            </button>
+                            <p class="fs-5 mt-2"></p>
+
                         </div>
+
                     </li>
                 </ul>
             </div>
             <hr>
 
-            <div class="mcq">
+            <div class="mcq ">
                 <h1 class="mt-5">
                     اسئلة اختيار متعدد
                 </h1>
                 <ul>
                     <li>
-                        <div class="mt-5">
+                        <div id="q1">
                             <p>
                                 ما هي الكواكب الموجودة في المجموعة الشمسية ؟
                             </p>
@@ -131,10 +171,15 @@
                                 <input type="checkbox" class="ms-2" id="four">
                                 درب التبانة
                             </label>
+
+                            <button class="btn btn-primary mt-4 fs-5">
+                                تاكيد الاجابة
+                            </button>
                         </div>
+
                     </li>
                     <li>
-                        <div class="mt-5">
+                        <div id="q2">
                             <p>
                                 ما هي فصول السنة ؟
                             </p>
@@ -155,20 +200,25 @@
                                 <input type="checkbox" class="ms-2" id="winter">
                                 شتاء
                             </label>
+
+                            <button class="btn btn-primary mt-4 fs-5">
+                                تاكيد الاجابة
+                            </button>
                         </div>
+
                     </li>
 
                 </ul>
             </div>
             <hr>
 
-            <div class="qa">
+            <div class="qa ">
                 <h1 class="mt-5">
                     اسئلة اختيار وحيد
                 </h1>
                 <ul>
                     <li>
-                        <div class="mt-5">
+                        <div id="q1">
                             <p>
                                 كم عدد ايام الاسبوع ؟
                             </p>
@@ -190,9 +240,12 @@
                                 8
                             </label>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
                     <li>
-                        <div class="mt-5">
+                        <div id="q2">
                             <p>
                                 ما هي اكبر دولة من حيث المساحة ؟
                             </p>
@@ -201,61 +254,70 @@
                                 <input type="radio" name="group1" class="ms-2" id="china">
                                 الصين
                             </label>
-                            <label for="usa">
-                                <input type="radio" name="group1" class="ms-2" id="usa">
-                                امريكا
-                            </label>
                             <label for="aus">
                                 <input type="radio" name="group1" class="ms-2" id="aus">
                                 استراليا
                             </label>
+                            <label for="usa">
+                                <input type="radio" name="group1" class="ms-2" id="usa">
+                                امريكا
+                            </label>
+
                             <label for="bar">
                                 <input type="radio" name="group1" class="ms-2" id="bar">
                                 البرازيل
                             </label>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
-
                 </ul>
             </div>
             <hr>
 
-            <div class="tru-false">
+            <div class="true-false ">
                 <h1 class="mt-5">
                     اسئلة صح و خطأ
                 </h1>
                 <ul>
                     <li>
-                        <div class="mt-5">
+                        <div id="q1">
                             <p>
                                 اللغة العربية بها 28 حرف ؟
                             </p>
 
                             <label for="true">
                                 <input type="radio" name="group2" class="ms-2" id="true">
-                                صح
+                                <i class="fa-solid fa-check right"></i>
                             </label>
                             <label for="false">
                                 <input type="radio" name="group2" class="ms-2" id="false">
-                                خطأ
+                                <i class="fa-sharp fa-solid fa-xmark wrong"></i>
                             </label>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
                     <li>
-                        <div class="mt-5">
+                        <div id="q2">
                             <p>
                                 اللغة العربية بها 26 حرف ؟
                             </p>
 
                             <label for="true1">
                                 <input type="radio" name="group3" class="ms-2" id="true1">
-                                صح
+                                <i class="fa-solid fa-check right"></i>
                             </label>
                             <label for="false1">
                                 <input type="radio" name="group3" class="ms-2" id="false1">
-                                خطأ
+                                <i class="fa-sharp fa-solid fa-xmark wrong"></i>
                             </label>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
 
 
@@ -263,13 +325,13 @@
             </div>
             <hr>
 
-            <div class="match">
+            <div class="match ">
                 <h1 class="mt-5">
                     اسئلة وصل
                 </h1>
                 <ul>
                     <li>
-                        <div class="mt-5">
+                        <div id="q1">
                             <div class="group">
                                 <p style="color:blue;">
                                     ما هو لون السؤال ؟
@@ -307,11 +369,14 @@
                                 </select>
                             </div>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
 
 
                     <li>
-                        <div class="mt-5">
+                        <div id="q2">
                             <div class="group">
                                 <p>
                                     ما هي عاصمة مصر ؟
@@ -349,12 +414,15 @@
                                 </select>
                             </div>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
                 </ul>
             </div>
             <hr>
 
-            <div class="dragdrop">
+            <div class="dragdrop ">
                 <h1 class="mt-5">
                     اسئلة سحب وافلات
                 </h1>
@@ -380,6 +448,9 @@
                                     ondragover="allowDrop(event)" id="back3"></div>
                             </div>
                         </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -393,29 +464,309 @@
 
 
 
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/training.js"></script>
+
+    <!-- <script>
+        // function allowDrop(event) {
+        //     event.preventDefault();
+        // }
+
+        // function drag(event) {
+        //     event.dataTransfer.setData("text", event.target.id);
+        // }
+
+        // function drop(event) {
+        //     event.preventDefault();
+        //     var data = event.dataTransfer.getData("text");
+        //     var draggedElement = document.getElementById(data);
+        //     var targetElement = event.target;
+        //     if (targetElement.classList.contains("back")) {
+        //         targetElement.classList.add("dropped");
+        //         targetElement.innerHTML = draggedElement.innerHTML;
+        //         draggedElement.setAttribute("draggable", "false");
+        //         draggedElement.classList.add("dragged");
+        //     }
+        // }
+
+        // // Esay Question
+        // let submitEsay = document.querySelectorAll('.esay button');
+        // let inputEsay = document.querySelectorAll('.esay input')
+
+        // submitEsay[0].onclick = function () {
+        //     submitEsay[0].disabled = true;
+        //     if (inputEsay[0].value == 'القاهرة') {
+        //         submitEsay[0].classList.add('btn-success')
+        //         submitEsay[0].classList.remove('btn-primary')
+        //         submitEsay[0].innerHTML = '  اجابة صحيحة'
+        //     } else {
+        //         submitEsay[0].classList.add('btn-danger')
+        //         submitEsay[0].classList.remove('btn-primary')
+        //         submitEsay[0].innerHTML = 'اجابة خاطئة'
+
+        //         document.querySelector('.esay #q1 p').innerHTML = 'الاجابة هي القاهرة'
+        //     }
+        // }
+
+        // submitEsay[1].onclick = function () {
+        //     submitEsay[1].disabled = true;
+        //     if (inputEsay[1].value == 'اسيا') {
+        //         submitEsay[1].classList.add('btn-success')
+        //         submitEsay[1].classList.remove('btn-primary')
+        //         submitEsay[1].innerHTML = '  اجابة صحيحة'
+        //     } else {
+        //         submitEsay[1].classList.add('btn-danger')
+        //         submitEsay[1].classList.remove('btn-primary')
+        //         submitEsay[1].innerHTML = 'اجابة خاطئة'
+
+        //         document.querySelector('.esay #q2 p').innerHTML = 'الاجابة هي اسيا'
+        //     }
+        // }
 
 
-    <script>
-        function allowDrop(event) {
-            event.preventDefault();
-        }
+        // // MCQ Question
+        // let submitMCQ = document.querySelectorAll('.mcq button')
+        // let inputMCQ1 = document.querySelectorAll('.mcq #q1 input')
+        // let inputMCQ2 = document.querySelectorAll('.mcq #q2 input')
 
-        function drag(event) {
-            event.dataTransfer.setData("text", event.target.id);
-        }
+        // submitMCQ[0].onclick = function () {
+        //     submitMCQ[0].disabled = true;
+        //     if (inputMCQ1[0].checked && inputMCQ1[1].checked && inputMCQ1[2].checked) {
+        //         submitMCQ[0].classList.add('btn-success')
+        //         submitMCQ[0].classList.remove('btn-primary')
+        //         submitMCQ[0].innerHTML = 'اجابة صحيحة'
+        //     } else {
+        //         submitMCQ[0].classList.add('btn-danger')
+        //         submitMCQ[0].classList.remove('btn-primary')
+        //         submitMCQ[0].innerHTML = 'اجابة خاطئة'
 
-        function drop(event) {
-            event.preventDefault();
-            var data = event.dataTransfer.getData("text");
-            var draggedElement = document.getElementById(data);
-            var targetElement = event.target;
-            if (targetElement.classList.contains("back")) {
-                targetElement.classList.add("dropped");
-                targetElement.innerHTML = draggedElement.innerHTML;
-                draggedElement.setAttribute("draggable", "false");
-                draggedElement.classList.add("dragged");
-            }
-        }
+        //         inputMCQ1[0].checked = true
+        //         inputMCQ1[1].checked = true
+        //         inputMCQ1[2].checked = true
+        //         inputMCQ1[3].checked = false
 
-    </script>
+        //         inputMCQ1[0].disabled = true
+        //         inputMCQ1[1].disabled = true
+        //         inputMCQ1[2].disabled = true
+        //         inputMCQ1[3].disabled = true
+
+        //     }
+        // }
+
+        // submitMCQ[1].onclick = function () {
+        //     submitMCQ[1].disabled = true;
+        //     if (inputMCQ2[0].checked && inputMCQ2[3].checked) {
+        //         submitMCQ[1].classList.add('btn-success')
+        //         submitMCQ[1].classList.remove('btn-primary')
+        //         submitMCQ[1].innerHTML = 'اجابة صحيحة'
+        //     } else {
+        //         submitMCQ[1].classList.add('btn-danger')
+        //         submitMCQ[1].classList.remove('btn-primary')
+        //         submitMCQ[1].innerHTML = 'اجابة خاطئة'
+
+        //         inputMCQ2[0].checked = true
+        //         inputMCQ2[1].checked = false
+        //         inputMCQ2[2].checked = false
+        //         inputMCQ2[3].checked = true
+
+        //         inputMCQ2[0].disabled = true
+        //         inputMCQ2[1].disabled = true
+        //         inputMCQ2[2].disabled = true
+        //         inputMCQ2[3].disabled = true
+
+        //     }
+        // }
+
+
+        // // one Question
+        // let submitQa = document.querySelectorAll('.qa button')
+        // let inputQa1 = document.querySelectorAll('.qa #q1 input')
+        // let inputQa2 = document.querySelectorAll('.qa #q2 input')
+
+        // submitQa[0].onclick = function () {
+        //     submitQa[0].disabled = true;
+        //     if (inputQa1[2].checked) {
+        //         submitQa[0].classList.add('btn-success')
+        //         submitQa[0].classList.remove('btn-primary')
+        //         submitQa[0].innerHTML = 'اجابة صحيحة'
+        //     } else {
+        //         submitQa[0].classList.add('btn-danger')
+        //         submitQa[0].classList.remove('btn-primary')
+        //         submitQa[0].innerHTML = 'اجابة خاطئة'
+
+        //         inputQa1[0].checked = true
+        //         inputQa1[1].checked = true
+        //         inputQa1[2].checked = true
+        //         inputQa1[3].checked = false
+
+        //         inputQa1[0].disabled = true
+        //         inputQa1[1].disabled = true
+        //         inputQa1[2].disabled = true
+        //         inputQa1[3].disabled = true
+
+
+        //     }
+        // }
+
+        // submitQa[1].onclick = function () {
+        //     submitQa[1].disabled = true;
+
+        //     if (inputQa2[1].checked) {
+
+        //         submitQa[1].classList.add('btn-success')
+        //         submitQa[1].classList.remove('btn-primary')
+        //         submitQa[1].innerHTML = 'اجابة صحيحة'
+
+        //     } else {
+        //         submitQa[1].classList.add('btn-danger')
+        //         submitQa[1].classList.remove('btn-primary')
+        //         submitQa[1].innerHTML = 'اجابة خاطئة'
+
+        //         inputQa2[0].checked = false
+        //         inputQa2[1].checked = true
+        //         inputQa2[2].checked = false
+        //         inputQa2[3].checked = false
+
+        //         inputQa2[0].disabled = true
+        //         inputQa2[1].disabled = true
+        //         inputQa2[2].disabled = true
+        //         inputQa2[3].disabled = true
+
+        //     }
+        // }
+
+
+        // // True False Question
+        // let submitTF = document.querySelectorAll('.true-false button')
+        // let inputTF1 = document.querySelectorAll('.true-false #q1 input')
+        // let inputTF2 = document.querySelectorAll('.true-false #q2 input')
+
+        // submitTF[0].onclick = function () {
+        //     submitTF[0].disabled = true
+
+        //     if (inputTF1[0].checked) {
+
+        //         submitTF[0].classList.add('btn-success')
+        //         submitTF[0].classList.remove('btn-primary')
+        //         submitTF[0].innerHTML = 'اجابة صحيحة'
+
+        //     } else {
+
+        //         submitTF[0].classList.add('btn-danger')
+        //         submitTF[0].classList.remove('btn-primary')
+        //         submitTF[0].innerHTML = 'اجابة خاطئة'
+
+        //         inputTF1[0].checked = true
+        //         inputTF1[1].checked = false
+
+        //         inputTF1[0].disabled = true
+        //         inputTF1[1].disabled = true
+        //     }
+
+        // }
+
+        // submitTF[1].onclick = function () {
+        //     submitTF[1].disabled = true
+
+        //     if (inputTF2[1].checked) {
+
+        //         submitTF[1].classList.add('btn-success')
+        //         submitTF[1].classList.remove('btn-primary')
+        //         submitTF[1].innerHTML = 'اجابة صحيحة'
+
+        //     } else {
+
+        //         submitTF[1].classList.add('btn-danger')
+        //         submitTF[1].classList.remove('btn-primary')
+        //         submitTF[1].innerHTML = 'اجابة خاطئة'
+
+        //         inputTF2[0].checked = false
+        //         inputTF2[1].checked = true
+
+        //         inputTF2[0].disabled = true
+        //         inputTF2[1].disabled = true
+        //     }
+        // }
+
+        // // Match Question
+        // let submitMatch = document.querySelectorAll('.match button')
+        // let select1 = document.querySelectorAll('.match #q1 select')
+        // let select2 = document.querySelectorAll('.match #q2 select')
+
+        // submitMatch[0].onclick = function () {
+
+        //     submitMatch[0].disabled = true
+
+        //     if (select1[0].value == 'blue' && select1[1].value == 'red' && select1[2].value == 'green') {
+
+        //         submitMatch[0].classList.add('btn-success')
+        //         submitMatch[0].classList.remove('btn-primary')
+        //         submitMatch[0].innerHTML = 'اجابة صحيحة'
+        //     } else {
+        //         submitMatch[0].classList.add('btn-danger')
+        //         submitMatch[0].classList.remove('btn-primary')
+        //         submitMatch[0].innerHTML = 'اجابة خاطئة'
+
+        //         select1[0].value = 'blue'
+        //         select1[1].value = 'red'
+        //         select1[2].value = 'green'
+
+        //         select1[0].disabled = true
+        //         select1[1].disabled = true
+        //         select1[2].disabled = true
+        //     }
+        // }
+
+        // submitMatch[1].onclick = function () {
+
+        //     submitMatch[1].disabled = true
+
+        //     if (select2[0].value == 'cir' && select2[1].value == 'rid' && select2[2].value == 'gaz') {
+
+        //         submitMatch[1].classList.add('btn-success')
+        //         submitMatch[1].classList.remove('btn-primary')
+        //         submitMatch[1].innerHTML = 'اجابة صحيحة'
+        //     } else {
+        //         submitMatch[1].classList.add('btn-danger')
+        //         submitMatch[1].classList.remove('btn-primary')
+        //         submitMatch[1].innerHTML = 'اجابة خاطئة'
+
+        //         select2[0].value = 'cir'
+        //         select2[1].value = 'rid'
+        //         select2[2].value = 'gaz'
+
+        //         select2[0].disabled = true
+        //         select2[1].disabled = true
+        //         select2[2].disabled = true
+        //     }
+
+
+        // }
+
+
+        // // Drag & Drop Question
+        // let submitDragDrop = document.querySelector('.dragdrop button')
+
+        // submitDragDrop.onclick = function () {
+        //     submitDragDrop.disabled = true
+
+        //     let back1 = document.getElementById("back1");
+        //     let back2 = document.getElementById("back2");
+        //     let back3 = document.getElementById("back3");
+
+
+        //     if (back1.innerHTML == "ازرق" && back2.innerHTML == "احمر" && back3.innerHTML == "اخضر") {
+
+        //         submitDragDrop.classList.add('btn-success')
+        //         submitDragDrop.classList.remove('btn-primary')
+        //         submitDragDrop.innerHTML = 'اجابة صحيحة'
+
+        //     } else {
+        //         submitDragDrop.classList.add('btn-danger')
+        //         submitDragDrop.classList.remove('btn-primary')
+        //         submitDragDrop.innerHTML = 'اجابة خاطئة'
+        //     }
+        // }
+
+    </script> -->
 </body>
