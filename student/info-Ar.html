@@ -27,8 +27,13 @@
         }
 
         @media (max-width: 767px) {
+
+            .header nav ul a::after {
+                right: 0;
+            }
+
             .toggle:hover {
-                right: 280px;
+                right: 300px;
             }
 
             .toggle:hover+.sidebar {
@@ -36,13 +41,19 @@
             }
 
             .sidebar {
-                right: -280px;
+                right: -300px;
             }
         }
 
         .info textarea {
             height: 150px;
             resize: none;
+        }
+
+        @media (max-width:992px) {
+            .header nav ul a::after {
+                right: 0;
+            }
         }
     </style>
 
@@ -54,7 +65,7 @@
             <div>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="stud-dash-Ar.html">
                             <i class="fa-solid fa-user"></i>
                             عام
                         </a>
@@ -130,7 +141,7 @@
                             </li>
                         </ul>
 
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
                             <a class="mx-3 name" href="">اهلا , Mo'men</a>
                             <a class="lang" href="info.html">English</a>
                         </div>
@@ -179,7 +190,8 @@
     </div>
 
 
-
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
