@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/all.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            direction: rtl;
+            font-family: 'Amiri', serif;
+        }
+
+        @media (max-width:992px) {
+            .header nav ul a::after {
+                right: 0;
+            }
+        }
+
+        .words .content {
+            flex-wrap: wrap;
+        }
+
+        .words .card {
+            position: relative;
+            flex-basis: 200px;
+            height: 250px;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+            cursor: pointer;
+        }
+
+        .words .card:hover {
+            transform: scale(1.2);
+        }
+
+        .words .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .words .face {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            backface-visibility: hidden;
+            user-select: none;
+        }
+
+        .words .front img {
+            width: 100%;
+            height: 200px;
+            margin: 25px 0;
+        }
+
+        .words .back {
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 5px;
+            transform: rotateY(180deg);
+            border: 5px solid var(--main-color);
+        }
+
+        .words .back p {
+            font-size: 80px;
+        }
+
+        .words .back span {
+            color: var(--main-color);
+        }
+    </style>
+
+    <div class="header  p-3">
+        <div class="container d-flex align-items-center justify-content-between">
+            <h1>تافل</h1>
+
+            <button class="btn menubar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="d-flex justify-content-between align-items-center">
+                <ul class="d-flex align-items-center">
+                    <li>
+                        <a href="../../ar.html">
+                            <i class="fa-solid fa-house fa-beat"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone fa-shake"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-circle-info fa-spin"></i>
+                            مساعدة
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="">
+                    <a class="name" href="../../student/stud-dash.html">اهلا , Mo'men</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <section class="words p-5">
+        <div class="container">
+            <div class="content d-flex align-items-center justify-content-center gap-4">
+                <div class=" card text-center p-3 " data-word="one">
+                    <div class="front face">
+                        <img class="img-fluid" src="words/برج.png" alt="">
+                    </div>
+                    <div class="back face">
+                        <p><span>بـ</span>رج</p>
+                    </div>
+                </div>
+                <div class="card text-center p-3" data-word="two">
+                    <div class="front face">
+                        <img class="img-fluid" src="words/بنت.png" alt="">
+                    </div>
+                    <div class="back face">
+                        <p><span>بـ</span>نت</p>
+                    </div>
+                </div>
+                <div class="card text-center p-3" data-word="three">
+                    <div class="front face">
+                        <img class="img-fluid" src="words/بيت.png" alt="">
+                    </div>
+                    <div class="back face">
+                        <p><span>بـ</span>يت</p>
+                    </div>
+                </div>
+                <div class="card text-center p-3" data-word="four">
+                    <div class="front face">
+                        <img class="img-fluid" src="words/حبل.png" alt="">
+                    </div>
+                    <div class="back face">
+                        <p>حـ<span>بـ</span>ل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <audio src="words/برج.mp3" id="one" preload="auto"></audio>
+    <audio src="words/بنت.mp3" id="two" preload="auto"></audio>
+    <audio src="words/بيت.mp3" id="three" preload="auto"></audio>
+    <audio src="words/حبل.mp3" id="four" preload="auto"></audio>
+
+
+
+
+
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/main.js"></script>
+
+
+
+
+    <script>
+
+        let card = Array.from(document.querySelectorAll('.content .card'))
+
+        card.forEach(el => {
+
+            el.addEventListener('click', e => {
+
+                card.forEach(el => { el.classList.remove('flipped') })
+
+                e.preventDefault();
+
+                el.classList.toggle('flipped')
+
+                document.getElementById(el.dataset.word).play()
+            })
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

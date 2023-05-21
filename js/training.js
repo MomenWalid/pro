@@ -29,12 +29,17 @@ submitEsay[0].onclick = function () {
         submitEsay[0].classList.add('btn-success')
         submitEsay[0].classList.remove('btn-primary')
         submitEsay[0].innerHTML = '  اجابة صحيحة'
+
+        correctAnswer()
+
     } else {
         submitEsay[0].classList.add('btn-danger')
         submitEsay[0].classList.remove('btn-primary')
         submitEsay[0].innerHTML = 'اجابة خاطئة'
 
         document.querySelector('.esay #q1 p').innerHTML = 'الاجابة هي القاهرة'
+
+        wrongAnswer()
     }
 }
 
@@ -44,12 +49,18 @@ submitEsay[1].onclick = function () {
         submitEsay[1].classList.add('btn-success')
         submitEsay[1].classList.remove('btn-primary')
         submitEsay[1].innerHTML = '  اجابة صحيحة'
+
+
+        correctAnswer()
+
     } else {
         submitEsay[1].classList.add('btn-danger')
         submitEsay[1].classList.remove('btn-primary')
         submitEsay[1].innerHTML = 'اجابة خاطئة'
 
         document.querySelector('.esay #q2 p').innerHTML = 'الاجابة هي اسيا'
+
+        wrongAnswer()
     }
 }
 
@@ -65,6 +76,9 @@ submitMCQ[0].onclick = function () {
         submitMCQ[0].classList.add('btn-success')
         submitMCQ[0].classList.remove('btn-primary')
         submitMCQ[0].innerHTML = 'اجابة صحيحة'
+
+        correctAnswer()
+
     } else {
         submitMCQ[0].classList.add('btn-danger')
         submitMCQ[0].classList.remove('btn-primary')
@@ -80,6 +94,9 @@ submitMCQ[0].onclick = function () {
         inputMCQ1[2].disabled = true
         inputMCQ1[3].disabled = true
 
+
+        wrongAnswer()
+
     }
 }
 
@@ -89,6 +106,8 @@ submitMCQ[1].onclick = function () {
         submitMCQ[1].classList.add('btn-success')
         submitMCQ[1].classList.remove('btn-primary')
         submitMCQ[1].innerHTML = 'اجابة صحيحة'
+
+        correctAnswer()
     } else {
         submitMCQ[1].classList.add('btn-danger')
         submitMCQ[1].classList.remove('btn-primary')
@@ -103,6 +122,9 @@ submitMCQ[1].onclick = function () {
         inputMCQ2[1].disabled = true
         inputMCQ2[2].disabled = true
         inputMCQ2[3].disabled = true
+
+
+        wrongAnswer()
 
     }
 }
@@ -119,6 +141,10 @@ submitQa[0].onclick = function () {
         submitQa[0].classList.add('btn-success')
         submitQa[0].classList.remove('btn-primary')
         submitQa[0].innerHTML = 'اجابة صحيحة'
+
+
+        correctAnswer()
+
     } else {
         submitQa[0].classList.add('btn-danger')
         submitQa[0].classList.remove('btn-primary')
@@ -135,6 +161,9 @@ submitQa[0].onclick = function () {
         inputQa1[3].disabled = true
 
 
+        wrongAnswer()
+
+
     }
 }
 
@@ -146,6 +175,8 @@ submitQa[1].onclick = function () {
         submitQa[1].classList.add('btn-success')
         submitQa[1].classList.remove('btn-primary')
         submitQa[1].innerHTML = 'اجابة صحيحة'
+
+        correctAnswer()
 
     } else {
         submitQa[1].classList.add('btn-danger')
@@ -161,6 +192,8 @@ submitQa[1].onclick = function () {
         inputQa2[1].disabled = true
         inputQa2[2].disabled = true
         inputQa2[3].disabled = true
+
+        wrongAnswer()
 
     }
 }
@@ -180,6 +213,8 @@ submitTF[0].onclick = function () {
         submitTF[0].classList.remove('btn-primary')
         submitTF[0].innerHTML = 'اجابة صحيحة'
 
+        correctAnswer()
+
     } else {
 
         submitTF[0].classList.add('btn-danger')
@@ -190,7 +225,10 @@ submitTF[0].onclick = function () {
         inputTF1[1].checked = false
 
         inputTF1[0].disabled = true
-        inputTF1[1].disabled = true
+        inputTF1[1].disabled =
+
+
+            wrongAnswer()
     }
 
 }
@@ -204,6 +242,8 @@ submitTF[1].onclick = function () {
         submitTF[1].classList.remove('btn-primary')
         submitTF[1].innerHTML = 'اجابة صحيحة'
 
+        correctAnswer()
+
     } else {
 
         submitTF[1].classList.add('btn-danger')
@@ -215,6 +255,8 @@ submitTF[1].onclick = function () {
 
         inputTF2[0].disabled = true
         inputTF2[1].disabled = true
+
+        wrongAnswer()
     }
 }
 
@@ -232,6 +274,9 @@ submitMatch[0].onclick = function () {
         submitMatch[0].classList.add('btn-success')
         submitMatch[0].classList.remove('btn-primary')
         submitMatch[0].innerHTML = 'اجابة صحيحة'
+
+        correctAnswer()
+
     } else {
         submitMatch[0].classList.add('btn-danger')
         submitMatch[0].classList.remove('btn-primary')
@@ -244,6 +289,8 @@ submitMatch[0].onclick = function () {
         select1[0].disabled = true
         select1[1].disabled = true
         select1[2].disabled = true
+
+        wrongAnswer()
     }
 }
 
@@ -256,6 +303,8 @@ submitMatch[1].onclick = function () {
         submitMatch[1].classList.add('btn-success')
         submitMatch[1].classList.remove('btn-primary')
         submitMatch[1].innerHTML = 'اجابة صحيحة'
+
+        correctAnswer()
     } else {
         submitMatch[1].classList.add('btn-danger')
         submitMatch[1].classList.remove('btn-primary')
@@ -268,6 +317,8 @@ submitMatch[1].onclick = function () {
         select2[0].disabled = true
         select2[1].disabled = true
         select2[2].disabled = true
+
+        wrongAnswer()
     }
 
 
@@ -291,9 +342,50 @@ submitDragDrop.onclick = function () {
         submitDragDrop.classList.remove('btn-primary')
         submitDragDrop.innerHTML = 'اجابة صحيحة'
 
+        correctAnswer()
+
     } else {
         submitDragDrop.classList.add('btn-danger')
         submitDragDrop.classList.remove('btn-primary')
         submitDragDrop.innerHTML = 'اجابة خاطئة'
+
+        wrongAnswer()
     }
 }
+
+
+function correctAnswer() {
+
+    let right = document.querySelectorAll('.audio .right audio')
+
+    let randomAudio = Math.floor(Math.random() * right.length)
+
+    right[randomAudio].play();
+
+    let overlayRight = document.querySelector('.overlay.right')
+
+    overlayRight.style.top = '0'
+    setTimeout(function () {
+        overlayRight.style.top = '-100%'
+    }, 2000)
+}
+
+function wrongAnswer() {
+
+    let wrong = document.querySelectorAll('.audio .wrong audio')
+
+    let randomAudio = Math.floor(Math.random() * wrong.length)
+
+    wrong[randomAudio].play();
+
+
+    let overlayWrong = document.querySelector('.overlay.wrong')
+
+    overlayWrong.style.top = '0'
+    setTimeout(function () {
+        overlayWrong.style.top = '-100%'
+    }, 2000)
+}
+
+
+

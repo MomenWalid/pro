@@ -1501,3 +1501,177 @@ footer .icons i {
 }
 
 /* End Study */
+
+/* Start Training  */
+
+.training {
+  font-size: 25px;
+}
+
+.training ul {
+  list-style: arabic-indic;
+}
+
+.training li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+}
+
+.training label {
+  display: block;
+}
+
+.training input {
+  font-size: 25px;
+}
+
+.form-select {
+  font-size: 25px;
+}
+
+.training input[type="checkbox"],
+.training input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.training .true-false .right {
+  color: #008000;
+}
+
+.training .true-false .wrong {
+  color: #ff0000;
+}
+
+.dragdrop .drag,
+.dragdrop .drop {
+  flex-basis: 40%;
+}
+
+.dragdrop .back {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: lightgray;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+}
+
+.dragdrop .color {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+}
+
+.back.dropped {
+  color: white;
+}
+
+.training a {
+  display: block;
+  font-size: 25px;
+}
+
+.overlay {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+/* End Training */
+
+/* Start Techers */
+
+.teacher img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.teacher p {
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .teacher {
+    flex-direction: column;
+  }
+
+  .teacher .demo {
+    justify-content: center;
+  }
+}
+
+/* End  Techers */
+
+/* Start  Students Table  */
+
+.table .responsive-table {
+  overflow-x: auto;
+}
+
+.table table {
+  min-width: 1200px;
+  border-spacing: 0;
+}
+
+.table thead td {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.table table td {
+  padding: 15px;
+}
+
+.table tbody td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.table tbody tr td:last-child {
+  border-right: 1px solid #eee;
+}
+
+.table tbody tr:hover td {
+  background-color: #faf7f7;
+}
+
+.table table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 2px;
+}
+
+.table table img:not(:first-child) {
+  margin-left: -20px;
+}
+
+.table table .label {
+  font-size: 13px;
+}
+
+.table button {
+  font-size: 18px;
+}
+
+/* End  Students Table  */
