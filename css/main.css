@@ -5,8 +5,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Amiri", serif;
   background-color: #f1f5f9;
+  font-size: 20px;
 }
 
 :root {
@@ -39,6 +40,44 @@ ul {
   background-color: #fff;
 }
 
+.header .head {
+  gap: 25%;
+}
+
+.header .info {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.header .info ul {
+  display: none !important;
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.header .info ul.open {
+  display: block !important;
+}
+
+.header .info a {
+  display: block;
+}
+
 .header ul a {
   padding: 15px 20px;
   color: #000;
@@ -68,19 +107,6 @@ ul {
   background-color: #fafafa;
 }
 
-.header .name {
-  color: #000;
-  padding: 10px 15px;
-  border: 1px solid var(--main-color);
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-.header .name:hover {
-  color: #fff;
-  background-color: var(--main-color);
-}
-
 .header .lang {
   padding: 10px 15px;
   background-color: var(--main-color);
@@ -88,6 +114,8 @@ ul {
   border-radius: 20px;
   font-size: 20px;
   transition: 0.3s;
+  margin-top: 10px;
+  margin-left: 0;
 }
 
 .header .lang:hover {
@@ -99,6 +127,10 @@ ul {
 }
 
 @media (max-width: 992px) {
+  .header .head {
+    justify-content: space-between;
+  }
+
   .header button {
     display: block;
     font-size: 25px;
@@ -135,11 +167,8 @@ ul {
     height: 100%;
   }
 
-  .header .name {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: fit-content;
+  .header .info ul {
+    left: 100px;
   }
 
   .header .lang {
@@ -169,7 +198,7 @@ ul {
 .sign-up .image {
   width: 500px;
   position: relative;
-  animation: topdown 4s linear infinite;
+  animation: topdown 10s linear infinite;
 }
 
 .sign-in .form,
@@ -221,7 +250,7 @@ ul {
   .sign-in .image,
   .sign-up .image {
     width: 250px;
-    animation: leftright 4s linear infinite;
+    animation: leftright 10s linear infinite;
   }
 
   @keyframes leftright {
@@ -283,6 +312,38 @@ ul {
   border-radius: 5px;
   padding: 20px;
   transition: 0.3s;
+}
+
+.sidebar h1 {
+  position: relative;
+  text-align: center;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.sidebar h1::before,
+.sidebar h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar h1::before {
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #000;
+  bottom: -5px;
+}
+
+.sidebar h1::after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  background-color: #fff;
+  bottom: -13px;
 }
 
 .toggle {
@@ -376,6 +437,30 @@ ul {
     margin-bottom: 20px;
   }
 }
+
+/* Start Info */
+
+.info textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* End Info */
+
+/* Start Settings */
+
+.settings img {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 767px) {
+  .settings .image {
+    flex-direction: column;
+  }
+}
+
+/* End Settings */
 
 /*End Student Dashboard */
 
@@ -1151,6 +1236,7 @@ nav h1 {
 footer {
   padding: var(--padding-section);
   background-color: var(--second-color);
+  color: #fff;
 }
 
 footer h4 {
@@ -1213,6 +1299,62 @@ footer .icons i {
 .up.show {
   right: 10px;
 }
+
+/* Start About Us */
+
+.about-us h1 {
+  text-align: center;
+  height: 100px;
+  font-size: 80px;
+  letter-spacing: 15px;
+  color: var(--main-alt-color);
+  width: 250px;
+  display: block;
+  margin: 80px auto;
+  overflow: hidden;
+  animation: controller 3s 2s both, blink 0.8s infinite;
+}
+
+@keyframes controller {
+  from {
+    width: 0;
+    border-right: 2px solid var(--main-alt-color);
+  }
+
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: var(--main-alt-color);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.about-us h2 {
+  color: var(--main-color);
+}
+
+.about-us .description p {
+  line-height: 1.7;
+  margin-left: 20px;
+}
+
+.about-us ul {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.about-us ul li {
+  margin-bottom: 20px;
+}
+
+/* End About Us */
 
 /* End Home Page */
 
@@ -1621,6 +1763,40 @@ footer .icons i {
 /* End  Techers */
 
 /* Start  Students Table  */
+
+.table {
+  position: relative;
+}
+
+.table .sidebar {
+  position: absolute;
+  left: -300px;
+  top: 0;
+}
+
+.table .sidebar span {
+  font-size: 20px;
+}
+
+.table .sbtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+
+.table .sidebar .xicon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.table .sidebar .xicon:hover {
+  color: #ff0000;
+}
 
 .table .responsive-table {
   overflow-x: auto;

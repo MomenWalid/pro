@@ -7,76 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/all.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/ar.css" />
 
 </head>
 
 <body>
-
-    <style>
-        body {
-            direction: rtl;
-        }
-
-        nav h1 {
-            margin-left: 30px;
-        }
-
-        .about-us h1 {
-            text-align: center;
-            height: 100px;
-            font-size: 80px;
-            color: var(--main-alt-color);
-            width: 250px;
-            display: block;
-            margin: 80px auto;
-            overflow: hidden;
-            animation: controller 3s 2s both, blink 0.8s infinite;
-        }
-
-        @keyframes controller {
-            from {
-                width: 0;
-                border-left: 2px solid var(--main-alt-color);
-            }
-
-            to {
-                width: 250px;
-            }
-        }
-
-        @keyframes blink {
-            from {
-                border-left-color: var(--main-alt-color);
-            }
-
-            to {
-                border-left-color: transparent;
-            }
-        }
-
-        .about-us h2 {
-            color: var(--main-color);
-        }
-
-        .about-us .description p {
-            line-height: 1.7;
-            margin-left: 20px;
-        }
-
-        .about-us ul {
-            list-style: disc;
-            margin-left: 30px;
-        }
-
-        .about-us ul li {
-            margin-bottom: 20px;
-        }
-    </style>
-
-
 
     <header>
         <nav class="navbar navbar-expand-lg align-items-center">
@@ -208,14 +149,75 @@
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h4>الأقسام</h4>
+                    <ul>
+                        <li><a href="">نبذة عنا</a></li>
+                        <li><a href="">مجلس الإدارة</a></li>
+                        <li><a href="">الرؤية والأهداف</a></li>
+                        <li><a href="">الوكلاء والموزعين</a></li>
+                        <li><a href="">الجهود العلمية</a></li>
+                        <li><a href="">المدونة</a></li>
+                        <li><a href="">الدورات السابقة</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="">سلسلة العربية بين يديك</a>
+                        </li>
+                        <li><a href="">سلسلة العربية بين يدي أولادنا</a>
+                        </li>
+                        <li><a href="">صوتيات سلسلة العربية بين يديك</a>
+                        </li>
+                        <li><a href="">صوتيات سلسلة العربية بين يدي أولادنا</a>
+                        </li>
+                        <li><a href="">العروض التقديمية</a>
+                        </li>
+                        <li><a href="">اختبار المعلم</a>
+                        </li>
+                        <li><a href="">اختبار الطالب</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <h4>اتصل بنا</h4>
+                        <ul>
+                            <li><a href="">للاستفسار والأسئلة العامة</a>
+                            </li>
+                            <li><a href="">قسم دورات تدريب المعلمين</a>
+                            </li>
+                            <li><a href="">قسم المبيعات</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="icons">
+                            <h4 class="mt-5">تواصل معنا</h4>
+                            <ul class="d-flex align-items-center mb-3">
+                                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
 
+                            <ul class=" d-flex align-items-center">
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-
-    <script>
-        document.querySelector('nav button').onclick = function () {
-            document.querySelector('nav .collapse').classList.toggle('show');
-        }
-    </script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

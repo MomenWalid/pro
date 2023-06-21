@@ -1,5 +1,22 @@
 let menuButton = document.querySelector('.header button');
 let lesson = document.querySelector('.lesson-content')
+let words = document.querySelector('.words')
+let table = document.querySelector('.table')
+let profileInfo = document.querySelector('.header .info')
+let nav = document.querySelector('header nav');
+
+if (nav) {
+    document.querySelector('nav button').onclick = function () {
+        document.querySelector('nav .collapse').classList.toggle('show');
+    }
+}
+
+if (profileInfo) {
+    profileInfo.onclick = function () {
+        document.querySelector('.header .info ul').classList.toggle('open')
+    }
+}
+
 
 // Toggle nav 
 if (menuButton) {
@@ -24,4 +41,37 @@ if (lesson) {
         }
     }
 }
+
+if (words) {
+    let card = Array.from(document.querySelectorAll('.content .card'))
+
+    card.forEach(el => {
+
+        el.addEventListener('click', e => {
+
+            card.forEach(el => { el.classList.remove('flipped') })
+
+            e.preventDefault();
+
+            el.classList.toggle('flipped')
+
+            document.getElementById(el.dataset.word).play()
+        })
+    })
+}
+
+// Table Sidebar
+if (table) {
+    document.querySelector('.table .sbtn').onclick = function () {
+        document.querySelector('.table .sidebar').style.left = '0'
+    }
+
+    document.querySelector('.table .sidebar .xicon').onclick = function () {
+        document.querySelector('.table .sidebar').style.left = '-300px'
+    }
+
+}
+
+
+
 

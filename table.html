@@ -18,23 +18,8 @@
 </head>
 
 <body>
-
-    <style>
-        body {
-            font-family: 'Amiri', serif;
-            font-size: 20px;
-        }
-
-        @media (max-width:992px) {
-            .header nav ul a::after {
-                right: 0;
-            }
-        }
-    </style>
-
-
     <div class="header  p-3">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container head d-flex align-items-center">
             <h1>TAFL</h1>
 
             <button class="btn menubar">
@@ -42,9 +27,9 @@
             </button>
 
             <nav class="d-flex justify-content-between align-items-center">
-                <ul class="d-flex align-items-center">
+                <ul class="d-flex align-items-center links">
                     <li>
-                        <a href="../index.html">
+                        <a href="index.html">
                             <i class="fa-solid fa-house fa-beat"></i>
                             Home
                         </a>
@@ -63,8 +48,22 @@
                     </li>
                 </ul>
 
-                <div class="">
-                    <a class="mx-3 name" href="../student/stud-dash.html">Hello, Mo'men</a>
+                <div class="info">
+                    <img src="imgs/profilepic.png" alt="">
+                    <ul>
+                        <li>
+                            <a href="student/stud-dash.html">
+                                <i class="fa-solid fa-user"></i>
+                                Mo'men Walid
+                            </a>
+                        </li>
+                        <li>
+                            <a href="auth/sign-in.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -72,7 +71,6 @@
 
     <section class="table p-5">
         <div class="container">
-
             <div class="p-4 bg-white rounded m-20">
                 <h2 class="mt-0 mb-20">Students Table</h2>
                 <div class="responsive-table">
@@ -211,13 +209,48 @@
                 </div>
             </div>
         </div>
+
+
+        <button class="btn sbtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <section class="sidebar">
+            <h1>TAFL</h1>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>+</span>
+                            Add Level
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>-</span>
+                            Remove Level
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>+</span>
+                            Add Lesson
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <span>-</span>
+                            Remove Lesson
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="xicon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </section>
     </section>
-
-
-
-
-
-
 
     <!-- Modal -->
     <div class="modal fade modal-lg" id="edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -292,11 +325,80 @@
     </div>
 
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h4>Departments</h4>
+                    <ul>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Board of Directors</a></li>
+                        <li><a href="">Vision and Goals</a></li>
+                        <li><a href="">Agents &amp; Distributors</a></li>
+                        <li><a href="">Scientific Efforts</a></li>
+                        <li><a href="">Blogs</a></li>
+                        <li><a href="">Previous Courses</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="">Arabic At Your Hands Series</a>
+                        </li>
+                        <li><a href="">Arabic At Our Children’s hands Series</a>
+                        </li>
+                        <li><a href="">Audio Of Arabic At Your Hands Series</a>
+                        </li>
+                        <li><a href="">Audio Of Arabic At Our Children’s hands Series</a>
+                        </li>
+                        <li><a href="">Power Point Presentations</a>
+                        </li>
+                        <li><a href="">Teacher Test</a>
+                        </li>
+                        <li><a href="">Student Test</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <h4>Contact with Us</h4>
+                        <ul>
+                            <li><a href="">Inquiries and Questions</a>
+                            </li>
+                            <li><a href="">Courses Department</a>
+                            </li>
+                            <li><a href="">Sales Department</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="icons">
+                            <h4 class="mt-5">Contact Us</h4>
+                            <ul class="d-flex align-items-center mb-3">
+                                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
 
+                            <ul class=" d-flex align-items-center">
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+
+
+
 </body>
 
 </html>

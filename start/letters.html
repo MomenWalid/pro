@@ -5,45 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/ar.css">
 </head>
 
 <body>
 
-    <style>
-        body {
-            direction: rtl;
-        }
-
-        @media (max-width:992px) {
-            .header nav ul a::after {
-                right: 0;
-            }
-        }
-    </style>
-
-
     <div class="header  p-3">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container head d-flex align-items-center">
             <h1>تافل</h1>
 
             <button class="btn menubar">
                 <i class="fa-solid fa-bars"></i>
             </button>
+
             <nav class="d-flex justify-content-between align-items-center">
-                <ul class="d-flex align-items-center">
+                <ul class="d-flex align-items-center links">
                     <li>
-                        <a href="../index.html">
+                        <a href="../ar.html">
                             <i class="fa-solid fa-house fa-beat"></i>
                             الرئيسية
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <i class="fa-solid fa-phone fa-shake"></i>
+                            <i class="fa-solid fa-phone-flip fa-shake"></i>
                             اتصل بنا
                         </a>
                     </li>
@@ -55,8 +48,22 @@
                     </li>
                 </ul>
 
-                <div class="">
-                    <a class="name" href="../student/stud-dash.html">اهلا , Mo'men</a>
+                <div class="info">
+                    <img src="../imgs/profilepic.png" alt="">
+                    <ul>
+                        <li>
+                            <a href="../student/stud-dash.html">
+                                <i class="fa-solid fa-user"></i>
+                                Mo'men Walid
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../auth/sign-in.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                تسجيل الخروج
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
@@ -65,6 +72,11 @@
     <section class="letters p-5">
 
         <div class="container">
+
+            <ul class="breadcrumb">
+                <li><a href="level.html">المستوى</a></li>
+                <li>الحروف</li>
+            </ul>
 
             <div class="letter-lesson d-flex align-items-center justify-content-center gap-4">
 

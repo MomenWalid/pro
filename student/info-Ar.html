@@ -6,62 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/all.min.css" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/ar.css" />
 </head>
 
-<body style=" direction: rtl;">
-
-    <style>
-        .sidebar {
-            right: 0;
-        }
-
-        .toggle {
-            right: 0;
-        }
-
-        .general .left {
-            margin-right: 0;
-        }
-
-        @media (max-width: 767px) {
-
-            .header nav ul a::after {
-                right: 0;
-            }
-
-            .toggle:hover {
-                right: 300px;
-            }
-
-            .toggle:hover+.sidebar {
-                right: 0;
-            }
-
-            .sidebar {
-                right: -300px;
-            }
-        }
-
-        .info textarea {
-            height: 150px;
-            resize: none;
-        }
-
-        @media (max-width:992px) {
-            .header nav ul a::after {
-                right: 0;
-            }
-        }
-    </style>
-
+<body>
 
     <div class="d-flex">
 
         <button class="toggle"> <i class="fa-solid fa-chevron-left"></i> </button>
         <section class="sidebar">
+            <h1>تافل</h1>
             <div>
                 <ul>
                     <li>
@@ -113,23 +74,24 @@
 
         <div class="w-100">
             <div class="header  p-3">
-                <div class="container d-flex align-items-center justify-content-between">
+                <div class="container head d-flex align-items-center">
                     <h1>تافل</h1>
 
                     <button class="btn menubar">
                         <i class="fa-solid fa-bars"></i>
                     </button>
+
                     <nav class="d-flex justify-content-between align-items-center">
-                        <ul class="d-flex align-items-center">
+                        <ul class="d-flex align-items-center links">
                             <li>
-                                <a href="">
+                                <a href="../ar.html">
                                     <i class="fa-solid fa-house fa-beat"></i>
                                     الرئيسية
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    <i class="fa-solid fa-phone fa-shake"></i>
+                                    <i class="fa-solid fa-phone-flip fa-shake"></i>
                                     اتصل بنا
                                 </a>
                             </li>
@@ -141,10 +103,24 @@
                             </li>
                         </ul>
 
-                        <div class="d-flex align-items-center">
-                            <a class="mx-3 name" href="">اهلا , Mo'men</a>
-                            <a class="lang" href="info.html">English</a>
+                        <div class="info">
+                            <img src="../imgs/profilepic.png" alt="">
+                            <ul>
+                                <li>
+                                    <a href="stud-dash-Ar.html">
+                                        <i class="fa-solid fa-user"></i>
+                                        Mo'men Walid
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../auth/sign-in.html">
+                                        <i class="fa-solid fa-right-from-bracket"></i>
+                                        تسجيل الخروج
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                        <a class="lang" href="info.html">English</a>
                     </nav>
                 </div>
             </div>
@@ -189,6 +165,73 @@
 
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h4>الأقسام</h4>
+                    <ul>
+                        <li><a href="">نبذة عنا</a></li>
+                        <li><a href="">مجلس الإدارة</a></li>
+                        <li><a href="">الرؤية والأهداف</a></li>
+                        <li><a href="">الوكلاء والموزعين</a></li>
+                        <li><a href="">الجهود العلمية</a></li>
+                        <li><a href="">المدونة</a></li>
+                        <li><a href="">الدورات السابقة</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="">سلسلة العربية بين يديك</a>
+                        </li>
+                        <li><a href="">سلسلة العربية بين يدي أولادنا</a>
+                        </li>
+                        <li><a href="">صوتيات سلسلة العربية بين يديك</a>
+                        </li>
+                        <li><a href="">صوتيات سلسلة العربية بين يدي أولادنا</a>
+                        </li>
+                        <li><a href="">العروض التقديمية</a>
+                        </li>
+                        <li><a href="">اختبار المعلم</a>
+                        </li>
+                        <li><a href="">اختبار الطالب</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <h4>اتصل بنا</h4>
+                        <ul>
+                            <li><a href="">للاستفسار والأسئلة العامة</a>
+                            </li>
+                            <li><a href="">قسم دورات تدريب المعلمين</a>
+                            </li>
+                            <li><a href="">قسم المبيعات</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="icons">
+                            <h4 class="mt-5">تواصل معنا</h4>
+                            <ul class="d-flex align-items-center mb-3">
+                                <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                                <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+
+                            <ul class=" d-flex align-items-center">
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/main.js"></script>
