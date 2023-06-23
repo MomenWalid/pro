@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Amiri", serif;
+  background-color: #f1f5f9;
+  font-size: 20px;
+}
+
+:root {
+  --main-color: #2196f3;
+  --main-alt-color: #1787e0;
+
+  --second-color: #19283f;
+
+  --section-color: #eee;
+
+  --padding-section: 50px 0;
+
+  --transition: 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* navbar */
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 10px;
+  background-color: #fff;
+  z-index: 10;
+}
+nav h1 {
+  margin-right: 30px;
+}
+
+.links a {
+  padding: 10px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #000;
+}
+
+.homelink {
+  color: #000;
+}
+
+.links a.active,
+.links a:hover {
+  color: var(--main-color);
+  background-color: transparent;
+}
+
+.search {
+  position: relative;
+  width: 120px;
+}
+.search::after {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  background-color: var(--main-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.ar.search::after {
+  right: 72%;
+}
+
+.search:hover:after {
+  background-color: var(--second-color);
+}
+
+.log,
+.lang {
+  margin-left: 10px;
+  background-color: var(--main-color);
+  border-radius: 25px;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+.log:hover,
+.lang:hover {
+  background-color: var(--second-color);
+}
+.log a,
+.lang a {
+  color: #fff;
+}
+/* navbar */
+
+/* Start About Us */
+
+.about-us h1 {
+  text-align: center;
+  height: 100px;
+  font-size: 80px;
+  letter-spacing: 15px;
+  color: var(--main-alt-color);
+  width: 250px;
+  display: block;
+  margin: 80px auto;
+  overflow: hidden;
+  animation: controller 3s 2s both, blink 0.8s infinite;
+}
+
+@keyframes controller {
+  from {
+    width: 0;
+    border-right: 2px solid var(--main-alt-color);
+  }
+
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: var(--main-alt-color);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.about-us h2 {
+  color: var(--main-color);
+}
+
+.about-us .description p {
+  line-height: 1.7;
+  margin-left: 20px;
+}
+
+.about-us ul {
+  list-style: disc;
+  margin-left: 30px;
+}
+
+.about-us ul li {
+  margin-bottom: 20px;
+}
+
+/* End About Us */
+
+/* Footer */
+
+footer {
+  padding: var(--padding-section);
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+footer h4 {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+footer li {
+  padding: 6px 0;
+}
+
+footer a {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: var(--main-color);
+}
+
+footer .icons ul {
+  gap: 30px;
+}
+footer .icons i {
+  font-size: 30px;
+}
+
+.foot {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.foot p {
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0;
+}
+
+/* Footer */

@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f9;
+  direction: rtl;
+  font-family: "Amiri", serif;
+  font-size: 20px;
+}
+
+:root {
+  --main-color: #2196f3;
+  --main-alt-color: #1787e0;
+  --second-color: #19283f;
+  --section-color: #eee;
+  --padding-section: 50px 0;
+  --transition: 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Start Training  */
+
+.training {
+  font-size: 25px;
+}
+
+.training ul {
+  list-style: arabic-indic;
+}
+
+.training li {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+}
+
+.training label {
+  display: block;
+}
+
+.training input {
+  font-size: 25px;
+}
+
+.form-select {
+  font-size: 25px;
+}
+
+.training input[type="checkbox"],
+.training input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.training .true-false .right {
+  color: #008000;
+}
+
+.training .true-false .wrong {
+  color: #ff0000;
+}
+
+.dragdrop .drag,
+.dragdrop .drop {
+  flex-basis: 40%;
+}
+
+.dragdrop .back {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: lightgray;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+}
+
+.dragdrop .color {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 60px;
+}
+
+.back.dropped {
+  color: white;
+}
+
+.training a {
+  display: block;
+  font-size: 25px;
+}
+
+.overlay {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+/* End Training */

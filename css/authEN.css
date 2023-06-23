@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Amiri", serif;
+  background-color: #f1f5f9;
+  font-size: 20px;
+}
+
+:root {
+  --main-color: #2196f3;
+  --main-alt-color: #1787e0;
+  --second-color: #19283f;
+  --section-color: #eee;
+  --padding-section: 50px 0;
+  --transition: 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Start Header */
+
+.header {
+  position: relative;
+  background-color: #fff;
+}
+
+.header .head {
+  gap: 25%;
+}
+
+.header .info {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.header .info ul {
+  display: none !important;
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.header .info ul.open {
+  display: block !important;
+}
+
+.header .info a {
+  display: block;
+}
+
+.header ul a {
+  padding: 15px 20px;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.header ul a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+
+.header ul a:hover::after {
+  width: 100%;
+}
+
+.header ul a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+
+.header .lang {
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.3s;
+  margin: 0 10px;
+}
+
+.header .lang:hover {
+  background-color: var(--main-alt-color);
+}
+
+.header button {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .header .head {
+    justify-content: space-between;
+  }
+
+  .header button {
+    display: block;
+    font-size: 25px;
+  }
+
+  .header nav {
+    position: absolute;
+    display: block !important;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    border-top: 3px solid var(--main-color);
+    background-color: #fff;
+    z-index: 2;
+    min-height: 287px;
+    padding: 10px;
+    display: none !important;
+  }
+
+  .header nav ul {
+    display: block !important;
+  }
+
+  .header nav ul a {
+    display: block;
+  }
+
+  .header nav ul a::after {
+    width: 4px !important;
+    height: 0;
+  }
+
+  .header ul a:hover::after {
+    height: 100%;
+  }
+
+  .header .info ul {
+    left: 100px;
+  }
+
+  .header .lang {
+    display: block;
+    width: fit-content;
+    margin: 10px 0 0;
+  }
+
+  .header button.open + nav {
+    display: block !important;
+  }
+}
+/* End Header */
+
+/* Start Authantication */
+
+/* Start Sign in & Sign up */
+
+.sign-in,
+.sign-up {
+  padding: 20px;
+}
+
+.sign-in .content,
+.sign-up .content {
+  gap: 30px;
+}
+
+.sign-in .image,
+.sign-up .image {
+  width: 500px;
+  position: relative;
+  animation: topdown 10s linear infinite;
+}
+
+.sign-in .form,
+.sign-up .form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  width: 350px;
+}
+
+.sign-in .form h1,
+.sign-up .form h1 {
+  color: var(--main-color);
+}
+.sign-in .form .forget,
+.sign-up .form .forget {
+  display: block;
+  width: fit-content;
+  margin: 5px auto;
+}
+
+@keyframes topdown {
+  0%,
+  50%,
+  100% {
+    top: 0;
+  }
+  25% {
+    top: -60px;
+  }
+  75% {
+    top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sign-in,
+  .sign-up {
+    margin-top: 0;
+  }
+
+  .sign-in .content,
+  .sign-up .content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sign-in .image,
+  .sign-up .image {
+    width: 250px;
+    animation: leftright 10s linear infinite;
+  }
+
+  @keyframes leftright {
+    0%,
+    50%,
+    100% {
+      left: 0;
+    }
+    25% {
+      left: -35px;
+    }
+    75% {
+      left: 35px;
+    }
+  }
+
+  .sign-in .form,
+  .sign-up .form {
+    width: fit-content;
+  }
+}
+
+/*End Sign in & Sign up */
+
+/* Start Forget Password */
+.forget-password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+.forget-password .buttons {
+  text-align: end;
+  margin-top: 30px;
+}
+
+@media (max-width: 576px) {
+  .forget-password {
+    width: 300px;
+    padding: 20px 5px;
+  }
+}
+/* End Forget Password */
+
+/* Start Authantication */

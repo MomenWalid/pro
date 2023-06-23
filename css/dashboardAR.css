@@ -1,0 +1,416 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5f9;
+  direction: rtl;
+  font-family: "Amiri", serif;
+  font-size: 20px;
+}
+
+:root {
+  --main-color: #2196f3;
+  --main-alt-color: #1787e0;
+  --second-color: #19283f;
+  --section-color: #eee;
+  --padding-section: 50px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Start Header */
+
+.header {
+  position: relative;
+  background-color: #fff;
+}
+
+.header .head {
+  gap: 25%;
+}
+
+.header .info {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.header .info ul {
+  display: none !important;
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.header .info ul.open {
+  display: block !important;
+}
+
+.header .info a {
+  display: block;
+}
+
+.header ul a {
+  padding: 15px 20px;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.header ul a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+
+.header ul a:hover::after {
+  width: 100%;
+}
+
+.header ul a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+
+.header .lang {
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.3s;
+  margin: 0 10px;
+}
+
+.header .lang:hover {
+  background-color: var(--main-alt-color);
+}
+
+.header button {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .header .head {
+    justify-content: space-between;
+  }
+
+  .header button {
+    display: block;
+    font-size: 25px;
+  }
+
+  .header nav {
+    position: absolute;
+    display: block !important;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    border-top: 3px solid var(--main-color);
+    background-color: #fff;
+    z-index: 2;
+    min-height: 287px;
+    padding: 10px;
+    display: none !important;
+  }
+
+  .header nav ul {
+    display: block !important;
+  }
+
+  .header nav ul a {
+    display: block;
+  }
+
+  .header nav ul a::after {
+    width: 4px !important;
+    height: 0;
+    right: 0;
+  }
+
+  .header ul a:hover::after {
+    height: 100%;
+  }
+
+  .header .info ul {
+    right: -100px;
+  }
+
+  .header .lang {
+    display: block;
+    width: fit-content;
+    margin: 10px 0 0;
+  }
+
+  .header button.open + nav {
+    display: block !important;
+  }
+}
+/* End Header */
+
+/*Start Student Dashboard */
+
+/* Start Sidebar */
+
+.sidebar {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.sidebar h1 {
+  position: relative;
+  text-align: center;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.sidebar h1::before,
+.sidebar h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar h1::before {
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #000;
+  bottom: -15px;
+}
+
+.sidebar h1::after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  background-color: #fff;
+  bottom: -23px;
+}
+
+.toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  display: none;
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  transform: rotate(180deg);
+}
+
+.sidebar li a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+.sidebar li a:hover,
+.sidebar li a.active {
+  background-color: #f6f6f6;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .toggle {
+    display: block;
+  }
+
+  .toggle:hover {
+    right: 300px;
+  }
+
+  .toggle:hover + .sidebar {
+    right: 0;
+    z-index: 10;
+  }
+
+  .sidebar {
+    position: absolute;
+    right: -300px;
+    height: 120vh;
+  }
+}
+
+/* End Sidebar */
+
+/* Start General */
+.general img {
+  width: 150px;
+}
+
+.general p {
+  font-weight: bold;
+}
+
+.general .left {
+  margin-right: 0px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.general .right {
+  border-radius: 15px;
+}
+
+.general .right li {
+  padding: 15px 10px;
+  border-bottom: 3px solid #f1f5f9;
+}
+
+.general .right li span:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .general .left {
+    margin-bottom: 20px;
+  }
+}
+/* End General */
+
+/* Start Password */
+@media (min-width: 991px) {
+  .change-pass input {
+    width: 50%;
+  }
+}
+/* End Password */
+
+/* Start Info */
+
+.info textarea {
+  height: 150px;
+  resize: none;
+}
+
+@media (min-width: 991px) {
+  .info textarea,
+  .info input {
+    width: 50%;
+  }
+}
+
+/* End Info */
+
+/* Start Settings */
+.settings img {
+  width: 100px;
+  height: 100px;
+}
+
+@media (min-width: 991px) {
+  .settings input[type="text"] {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .settings .image {
+    flex-direction: column;
+  }
+}
+/* end Settings */
+
+/*End Student Dashboard */
+
+/* Start Footer*/
+
+footer {
+  padding: var(--padding-section);
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+footer h4 {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+footer li {
+  padding: 6px 0;
+}
+
+footer a {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: var(--main-color);
+}
+
+footer .icons ul {
+  gap: 30px;
+}
+footer .icons i {
+  font-size: 30px;
+}
+
+.foot {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.foot p {
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0;
+}
+/* End Footer*/

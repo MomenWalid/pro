@@ -1,0 +1,424 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Amiri", serif;
+  background-color: #f1f5f9;
+  font-size: 20px;
+}
+
+:root {
+  --main-color: #2196f3;
+  --main-alt-color: #1787e0;
+
+  --second-color: #19283f;
+
+  --section-color: #eee;
+
+  --padding-section: 50px 0;
+
+  --transition: 0.5s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+
+.header {
+  position: relative;
+  background-color: #fff;
+}
+
+.header .head {
+  gap: 25%;
+}
+
+.header .info {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.header .info ul {
+  display: none !important;
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.header .info ul.open {
+  display: block !important;
+}
+
+.header .info a {
+  display: block;
+}
+
+.header ul a {
+  padding: 15px 20px;
+  color: #000;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.header ul a::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transition: 0.3s;
+}
+
+.header ul a:hover::after {
+  width: 100%;
+}
+
+.header ul a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+
+.header .lang {
+  padding: 10px 15px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.3s;
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.header .lang:hover {
+  background-color: var(--main-alt-color);
+}
+
+.header button {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .header .head {
+    justify-content: space-between;
+  }
+
+  .header button {
+    display: block;
+    font-size: 25px;
+  }
+
+  .header nav {
+    position: absolute;
+    display: block !important;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    border-top: 3px solid var(--main-color);
+    background-color: #fff;
+    z-index: 2;
+    min-height: 287px;
+    padding: 10px;
+    display: none !important;
+  }
+
+  .header nav ul {
+    display: block !important;
+  }
+
+  .header nav ul a {
+    display: block;
+  }
+
+  .header nav ul a::after {
+    width: 4px !important;
+    height: 0;
+  }
+
+  .header ul a:hover::after {
+    height: 100%;
+  }
+
+  .header .info ul {
+    left: 100px;
+  }
+
+  .header .lang {
+    display: block;
+    width: fit-content;
+  }
+
+  .header button.open + nav {
+    display: block !important;
+  }
+}
+/* Header */
+
+/* Start Sidebar */
+
+.sidebar {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.sidebar h1 {
+  position: relative;
+  text-align: center;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.sidebar h1::before,
+.sidebar h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sidebar h1::before {
+  width: 100px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #000;
+  bottom: -15px;
+}
+
+.sidebar h1::after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  background-color: #fff;
+  bottom: -23px;
+}
+
+.toggle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  display: none;
+  transition: 0.3s;
+}
+
+.toggle:hover {
+  transform: rotate(180deg);
+}
+
+.sidebar li a {
+  display: block;
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+.sidebar li a:hover,
+.sidebar li a.active {
+  background-color: #f6f6f6;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .toggle {
+    display: block;
+  }
+
+  .toggle:hover {
+    left: 300px;
+  }
+
+  .toggle:hover + .sidebar {
+    left: 0;
+    z-index: 10;
+  }
+
+  .sidebar {
+    position: absolute;
+    left: -300px;
+    height: 120vh;
+  }
+}
+/* End Sidebar */
+
+/* Start  Students Table  */
+
+.table {
+  position: relative;
+}
+
+.table .sidebar {
+  position: absolute;
+  left: -300px;
+  top: 0;
+}
+
+.table .sidebar span {
+  font-size: 20px;
+}
+
+.table .sbtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+}
+
+.table .sidebar .xicon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--main-color);
+}
+
+.table .sidebar .xicon:hover {
+  color: #ff0000;
+}
+
+.table .responsive-table {
+  overflow-x: auto;
+}
+
+.table table {
+  min-width: 1200px;
+  border-spacing: 0;
+}
+
+.table thead td {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.table table td {
+  padding: 15px;
+}
+
+.table tbody td {
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.table tbody tr td:last-child {
+  border-right: 1px solid #eee;
+}
+
+.table tbody tr:hover td {
+  background-color: #faf7f7;
+}
+
+.table table img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 2px;
+}
+
+.table table img:not(:first-child) {
+  margin-left: -20px;
+}
+
+.table table .label {
+  font-size: 13px;
+}
+
+.table button {
+  font-size: 18px;
+}
+
+/* End  Students Table  */
+
+/* Start Footer */
+
+footer {
+  padding: var(--padding-section);
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+footer h4 {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+footer li {
+  padding: 6px 0;
+}
+
+footer a {
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: var(--main-color);
+}
+
+footer .icons ul {
+  gap: 30px;
+}
+footer .icons i {
+  font-size: 30px;
+}
+
+.foot {
+  background-color: var(--main-color);
+  color: #fff;
+}
+.foot p {
+  font-weight: 600;
+  font-size: 25px;
+  margin: 0;
+}
+
+/* End Footer */

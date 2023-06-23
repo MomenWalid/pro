@@ -3,13 +3,7 @@ let lesson = document.querySelector('.lesson-content')
 let words = document.querySelector('.words')
 let table = document.querySelector('.table')
 let profileInfo = document.querySelector('.header .info')
-let nav = document.querySelector('header nav');
 
-if (nav) {
-    document.querySelector('nav button').onclick = function () {
-        document.querySelector('nav .collapse').classList.toggle('show');
-    }
-}
 
 if (profileInfo) {
     profileInfo.onclick = function () {
@@ -75,3 +69,17 @@ if (table) {
 
 
 
+let up = document.querySelector(".up");
+
+if (up) {
+    window.onscroll = function () {
+        this.scrollY >= 1000 ? up.classList.add("show") : up.classList.remove("show");
+    };
+
+    up.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+}
