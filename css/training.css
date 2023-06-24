@@ -122,4 +122,13 @@ ul {
   transition: 0.5s;
 }
 
+.comment textarea {
+  height: 150px;
+  resize: none;
+}
+
+.upload-img label {
+  width: fit-content;
+}
+
 /* End Training */
