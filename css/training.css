@@ -104,6 +104,35 @@ ul {
   color: white;
 }
 
+.dragdrop .drag-content {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dragdrop .drop-content {
+  flex-wrap: wrap;
+}
+
+.dragdrop .drag-content .dragE {
+  background-color: #fff;
+  padding: 10px 5px;
+  font-size: 22px;
+  border: 2px solid #000;
+  width: 75px;
+  height: 55px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dragdrop .drop-content .dropE {
+  background-color: #eee;
+  padding: 10px 5px;
+  font-size: 22px;
+  border: 1px solid #fff;
+  width: 75px;
+  height: 55px;
+  text-align: center;
+}
+
 .training a {
   display: block;
   font-size: 25px;

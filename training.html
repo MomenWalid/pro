@@ -347,7 +347,7 @@
                 </h1>
 
                 <ul>
-                    <li>
+                    <li id="q1">
                         <p>
                             ضع الكلام مكان الالوان المناسبة
                         </p>
@@ -366,6 +366,42 @@
                                 <div class="back" style="background-color: green;" ondrop="drop(event)"
                                     ondragover="allowDrop(event)" id="back3"></div>
                             </div>
+                        </div>
+                        <button class="btn btn-primary mt-4 fs-5">
+                            تاكيد الاجابة
+                        </button>
+                    </li>
+
+                    <li id="q2">
+                        <p>
+                            اسحب الكلمات وضعها في الأماكن الصحيحة لتكوين جملة مفهومة وصحيحة
+                        </p>
+
+                        <div>
+
+                            <div class="drag-content d-flex align-items-center mb-4">
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE1">الطالب</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE2">المدرسة</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE3">يذهب</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE4">كل</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE5">يوم</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE6">في</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE7">إلى</div>
+                                <div class="dragE" draggable="true" ondragstart="drag(event)" id="dragE8">الصباح</div>
+                            </div>
+
+
+                            <div class="drop-content d-flex align-items-center">
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE1"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE2"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE3"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE4"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE5"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE6"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE7"></div>
+                                <div class="dropE" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropE8"></div>
+                            </div>
+
                         </div>
                         <button class="btn btn-primary mt-4 fs-5">
                             تاكيد الاجابة

@@ -11,7 +11,7 @@ function drop(event) {
     var data = event.dataTransfer.getData("text");
     var draggedElement = document.getElementById(data);
     var targetElement = event.target;
-    if (targetElement.classList.contains("back")) {
+    if (targetElement.classList.contains(event.target.className)) {
         targetElement.classList.add("dropped");
         targetElement.innerHTML = draggedElement.innerHTML;
         draggedElement.setAttribute("draggable", "false");
