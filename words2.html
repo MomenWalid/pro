@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/words2.css">
+
+</head>
+
+<body>
+
+
+    <div class="header  p-3">
+        <div class="container head d-flex align-items-center">
+            <h1>تافل</h1>
+
+            <button class="btn menubar">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="d-flex justify-content-between align-items-center">
+                <ul class="d-flex align-items-center links">
+                    <li>
+                        <a href="ar.html">
+                            <i class="fa-solid fa-house fa-beat"></i>
+                            الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-phone-flip fa-shake"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-circle-info fa-spin"></i>
+                            مساعدة
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="info">
+                    <img src="imgs/profilepic.png" alt="">
+                    <ul>
+                        <li>
+                            <a href="student/stud-dash.html">
+                                <i class="fa-solid fa-user"></i>
+                                Mo'men Walid
+                            </a>
+                        </li>
+                        <li>
+                            <a href="auth/sign-in.html">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                تسجيل الخروج
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <section class="words2 p-5">
+        <div class="container">
+            <div class="content p-3">
+                <div class="controls d-flex align-items-center justify-content-between">
+                    <div class="control-btn d-flex align-items-center">
+                        <button class="btn btn-primary" id="resize">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                        </button>
+                        <button class="btn btn-primary " id="volume">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                        <button class="btn btn-primary " id="play">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <button class="btn btn-primary " id="reload">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+
+                    <input type="range" id="prog" min="0" max="100" value="0">
+
+                    <div class="control-page d-flex align-items-center">
+                        <div class="page-num">
+                            <span>صفحة</span>
+                            <span>0 - 5</span>
+                        </div>
+                        <div class="slider-btn d-flex align-items-center ">
+                            <button class="prev btn btn-primary right"><i class="fa-solid fa-chevron-right fa-lg"></i>
+                            </button>
+                            <button class="next btn btn-primary left"><i class="fa-solid fa-chevron-left fa-lg"></i></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-show"></div>
+            </div>
+        </div>
+
+
+        <audio src="audio/claps.mp3" id="audio"></audio>
+
+    </section>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -83,3 +83,94 @@ if (up) {
         });
     };
 }
+
+
+let words2 = document.querySelector('.words2');
+
+if (words2) {
+    let fullscreenButton = document.getElementById('resize');
+    let volumeButton = document.getElementById('volume')
+    let playButton = document.getElementById('play')
+    let reloadButton = document.getElementById('reload')
+
+    let audio = document.getElementById('audio')
+    let progressBar = document.getElementById('prog')
+
+
+    fullscreenButton.addEventListener('click', function () {
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+
+            document.querySelector('#resize i').classList.remove('fa-up-right-and-down-left-from-center')
+            document.querySelector('#resize i').classList.add('fa-down-left-and-up-right-to-center')
+        }
+
+        if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement) {
+            if (document.exitFullscreen) {
+                document.exitFullscreen()
+
+                document.querySelector('#resize i').classList.add('fa-up-right-and-down-left-from-center')
+                document.querySelector('#resize i').classList.remove('fa-down-left-and-up-right-to-center')
+            }
+        }
+
+    });
+
+    volumeButton.addEventListener('click', function () {
+
+        document.querySelector('#volume i').classList.toggle('fa-volume-high')
+        document.querySelector('#volume i').classList.toggle('fa-volume-xmark')
+
+        if (document.querySelector('#volume i').classList.contains('fa-volume-high')) {
+            audio.volume = 1
+        }
+
+        if (document.querySelector('#volume i').classList.contains('fa-volume-xmark')) {
+            audio.volume = 0
+        }
+
+
+
+
+    })
+
+    playButton.addEventListener('click', function () {
+
+        document.querySelector('#play i').classList.toggle('fa-play')
+        document.querySelector('#play i').classList.toggle('fa-pause')
+
+        if (document.querySelector('#play i').classList.contains('fa-play')) {
+            audio.pause()
+        }
+
+        if (document.querySelector('#play i').classList.contains('fa-pause')) {
+            audio.play()
+        }
+    })
+
+    reloadButton.addEventListener('click', function () {
+        audio.load()
+        audio.currentTime = 0
+        audio.play()
+
+        document.querySelector('#play i').classList.remove('fa-play')
+        document.querySelector('#play i').classList.add('fa-pause')
+    })
+
+
+
+    audio.addEventListener('timeupdate', function () {
+        var currentTime = audio.currentTime;
+        var duration = audio.duration;
+        var progress = (currentTime / duration) * 100;
+        progressBar.value = progress;
+
+        if (progressBar.value == 100) {
+            document.querySelector('#play i').classList.add('fa-play')
+            document.querySelector('#play i').classList.remove('fa-pause')
+        }
+    });
+
+
+
+}
