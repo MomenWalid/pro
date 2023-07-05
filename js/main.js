@@ -92,9 +92,15 @@ if (words2) {
     let volumeButton = document.getElementById('volume')
     let playButton = document.getElementById('play')
     let reloadButton = document.getElementById('reload')
-
     let audio = document.getElementById('audio')
     let progressBar = document.getElementById('prog')
+
+    let pageNum = document.querySelector('.page-num .num')
+    let slider = document.querySelectorAll('.slide-show .slide');
+    let nextBtn = document.querySelector('.slider-btn .next')
+    let prevBtn = document.querySelector('.slider-btn .prev')
+    let currentSlide = 1;
+
 
 
     fullscreenButton.addEventListener('click', function () {
@@ -117,7 +123,6 @@ if (words2) {
     });
 
     volumeButton.addEventListener('click', function () {
-
         document.querySelector('#volume i').classList.toggle('fa-volume-high')
         document.querySelector('#volume i').classList.toggle('fa-volume-xmark')
 
@@ -128,14 +133,9 @@ if (words2) {
         if (document.querySelector('#volume i').classList.contains('fa-volume-xmark')) {
             audio.volume = 0
         }
-
-
-
-
     })
 
     playButton.addEventListener('click', function () {
-
         document.querySelector('#play i').classList.toggle('fa-play')
         document.querySelector('#play i').classList.toggle('fa-pause')
 
@@ -157,8 +157,6 @@ if (words2) {
         document.querySelector('#play i').classList.add('fa-pause')
     })
 
-
-
     audio.addEventListener('timeupdate', function () {
         var currentTime = audio.currentTime;
         var duration = audio.duration;
@@ -170,6 +168,56 @@ if (words2) {
             document.querySelector('#play i').classList.remove('fa-pause')
         }
     });
+
+
+
+
+    nextBtn.onclick = function () {
+        if (nextBtn.classList.contains("disable")) {
+            return false;
+        } else {
+            currentSlide++;
+            theChecker();
+        }
+    }
+
+    prevBtn.onclick = function () {
+        if (prevBtn.classList.contains('disable')) {
+            return false
+        } else {
+            currentSlide--
+            theChecker()
+        }
+    }
+
+    theChecker()
+
+    function theChecker() {
+        pageNum.innerHTML = `${slider.length} - ${currentSlide}`;
+
+        removeActive();
+
+        slider[currentSlide - 1].classList.add('active')
+
+        if (currentSlide == 1) {
+            prevBtn.classList.add('disable')
+        } else {
+            prevBtn.classList.remove('disable')
+        }
+
+        if (currentSlide == slider.length) {
+            nextBtn.classList.add('disable')
+        } else {
+            nextBtn.classList.remove('disable')
+        }
+
+    }
+
+    function removeActive() {
+        slider.forEach((img) => {
+            img.classList.remove("active");
+        });
+    }
 
 
 

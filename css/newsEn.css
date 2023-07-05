@@ -119,11 +119,22 @@ nav h1 {
   top: 0;
   left: 0;
   width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.sidebar div {
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  padding: 20px;
-  transition: 0.3s;
+  padding: 20px 15px;
+  width: 300px;
+}
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
 }
 
 .sidebar h1 {
@@ -159,7 +170,7 @@ nav h1 {
 }
 
 .toggle {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 150px;
   width: fit-content;
@@ -188,12 +199,6 @@ nav h1 {
   background-color: #f6f6f6;
 }
 
-@media (min-width: 768px) {
-  .sidebar {
-    height: 100vh;
-  }
-}
-
 @media (max-width: 767px) {
   .toggle {
     display: block;
@@ -209,10 +214,10 @@ nav h1 {
   }
 
   .sidebar {
-    position: fixed;
+    position: absolute;
+    padding: 0;
     top: 60px;
     left: -300px;
-    height: 120vh;
   }
 }
 /* End Sidebar */
@@ -221,6 +226,7 @@ nav h1 {
 .news-details {
   position: relative;
   padding: 100px 0;
+  gap: 50px;
 }
 .news-details .details {
   padding: 0 10px;
@@ -233,6 +239,7 @@ nav h1 {
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 50px;
+  width: 85%;
 }
 .news-details .details .box img {
   width: 100%;
@@ -248,6 +255,14 @@ nav h1 {
   line-height: 1.7;
   font-size: 18px;
 }
+
+@media (max-width: 767px) {
+  .news-details .details .box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* End News */
 
 /* Footer */
