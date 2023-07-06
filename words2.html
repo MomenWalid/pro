@@ -108,24 +108,28 @@
                     </div>
                 </div>
                 <div class="slide-show p-3">
-                    <div class="slide active p-3">
+                    <div class="slide active p-3" data-audio="claps">
                         <img class="img-fulid" src="imgs/p1.jpg" alt="">
-                        <h3>Slide 1</h3>
+                        <h3>Claps</h3>
                     </div>
-                    <div class="slide p-3">
+                    <div class="slide p-3" data-audio="success">
                         <img class="img-fulid" src="imgs/p2.png" alt="">
-                        <h3>Slide 2</h3>
+                        <h3>Success</h3>
                     </div>
-                    <div class="slide p-3">
+                    <div class="slide p-3" data-audio="win">
                         <img class="img-fulid" src="imgs/p3.jpg" alt="">
-                        <h3>Slide 3</h3>
+                        <h3>win</h3>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <audio src="audio/claps.mp3" id="audio"></audio>
+        <div class="audio">
+            <audio src="audio/claps.mp3" id="claps" preload="auto"></audio>
+            <audio src="audio/success.wav" id="success" preload="auto"></audio>
+            <audio src="audio/win.wav" id="win" preload="auto"></audio>
+        </div>
 
     </section>
 

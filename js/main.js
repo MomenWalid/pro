@@ -92,14 +92,78 @@ if (words2) {
     let volumeButton = document.getElementById('volume')
     let playButton = document.getElementById('play')
     let reloadButton = document.getElementById('reload')
-    let audio = document.getElementById('audio')
     let progressBar = document.getElementById('prog')
+    let audio
+
 
     let pageNum = document.querySelector('.page-num .num')
     let slider = document.querySelectorAll('.slide-show .slide');
     let nextBtn = document.querySelector('.slider-btn .next')
     let prevBtn = document.querySelector('.slider-btn .prev')
     let currentSlide = 1;
+
+
+
+
+    nextBtn.onclick = function () {
+        if (nextBtn.classList.contains("disable")) {
+            return false;
+        } else {
+            audio.pause()
+
+            currentSlide++;
+
+            theChecker();
+
+            controlAudio()
+        }
+    }
+
+    prevBtn.onclick = function () {
+        if (prevBtn.classList.contains('disable')) {
+            return false
+        } else {
+
+            audio.pause()
+
+            currentSlide--
+
+            theChecker()
+
+            controlAudio()
+        }
+    }
+
+    theChecker()
+
+    function theChecker() {
+        pageNum.innerHTML = `${slider.length} - ${currentSlide}`;
+
+        removeActive();
+
+        slider[currentSlide - 1].classList.add('active')
+
+        audio = document.getElementById(slider[currentSlide - 1].dataset.audio)
+
+        if (currentSlide == 1) {
+            prevBtn.classList.add('disable')
+        } else {
+            prevBtn.classList.remove('disable')
+        }
+
+        if (currentSlide == slider.length) {
+            nextBtn.classList.add('disable')
+        } else {
+            nextBtn.classList.remove('disable')
+        }
+
+    }
+
+    function removeActive() {
+        slider.forEach((img) => {
+            img.classList.remove("active");
+        });
+    }
 
 
 
@@ -158,67 +222,46 @@ if (words2) {
     })
 
     audio.addEventListener('timeupdate', function () {
-        var currentTime = audio.currentTime;
-        var duration = audio.duration;
-        var progress = (currentTime / duration) * 100;
+        let currentTime = audio.currentTime;
+        let duration = audio.duration;
+        let progress = (currentTime / duration) * 100;
         progressBar.value = progress;
 
         if (progressBar.value == 100) {
             document.querySelector('#play i').classList.add('fa-play')
             document.querySelector('#play i').classList.remove('fa-pause')
+
         }
     });
 
 
+    function controlAudio() {
+        audio.currentTime = 0
+        progressBar.value = "0"
+        audio.play()
 
-
-    nextBtn.onclick = function () {
-        if (nextBtn.classList.contains("disable")) {
-            return false;
+        if (document.querySelector('#volume i').classList.contains('fa-volume-high')) {
+            audio.volume = 1
         } else {
-            currentSlide++;
-            theChecker();
-        }
-    }
-
-    prevBtn.onclick = function () {
-        if (prevBtn.classList.contains('disable')) {
-            return false
-        } else {
-            currentSlide--
-            theChecker()
-        }
-    }
-
-    theChecker()
-
-    function theChecker() {
-        pageNum.innerHTML = `${slider.length} - ${currentSlide}`;
-
-        removeActive();
-
-        slider[currentSlide - 1].classList.add('active')
-
-        if (currentSlide == 1) {
-            prevBtn.classList.add('disable')
-        } else {
-            prevBtn.classList.remove('disable')
+            audio.volume = 0
         }
 
-        if (currentSlide == slider.length) {
-            nextBtn.classList.add('disable')
-        } else {
-            nextBtn.classList.remove('disable')
-        }
+        document.querySelector('#play i').classList.remove('fa-play')
+        document.querySelector('#play i').classList.add('fa-pause')
 
-    }
+        audio.addEventListener('timeupdate', function () {
+            let currentTime = audio.currentTime;
+            let duration = audio.duration;
+            let progress = (currentTime / duration) * 100;
+            progressBar.value = progress;
 
-    function removeActive() {
-        slider.forEach((img) => {
-            img.classList.remove("active");
+            if (progressBar.value == 100) {
+                document.querySelector('#play i').classList.add('fa-play')
+                document.querySelector('#play i').classList.remove('fa-pause')
+
+            }
         });
     }
-
 
 
 }
