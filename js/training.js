@@ -1,3 +1,90 @@
+window.addEventListener('beforeunload', function (event) {
+
+    event.preventDefault();
+
+    const confirmationMessage = 'Are you sure you want to leave this page?';
+
+    event.returnValue = confirmationMessage;
+});
+
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+
+document.addEventListener("copy", function (e) {
+    e.preventDefault();
+});
+
+document.addEventListener("paste", function (e) {
+    e.preventDefault();
+});
+
+
+
+let duration = 2 * 60 * 60 * 1000
+let twoHours = new Date().getTime() + duration
+
+let count = setInterval(() => {
+
+    let date = new Date().getTime()
+
+    let dateDiff = twoHours - date
+
+    let hour = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minute = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+    let second = Math.floor((dateDiff % (1000 * 60)) / 1000);
+
+    document.querySelector(".hours").innerHTML =
+        hour < 10 ? `0${hour}  ` : `${hour}  `;
+    document.querySelector(".minutes").innerHTML =
+        minute < 10 ? `0${minute}  : ` : `${minute}  : `;
+    document.querySelector(".seconds").innerHTML =
+        second < 10 ? `0${second} : ` : `${second} : `;
+
+    if (hour <= 0 && minute <= 0 && second <= 0) {
+        clearInterval(count)
+
+        let timer = document.querySelector('.training .timer')
+        timer.classList.add('finish')
+        timer.innerHTML = ''
+
+        let span = document.createElement('span')
+        span.innerHTML = '00:00:00'
+        span.style.color = '#ff0000'
+
+        let h4 = document.createElement('h4')
+        let h4Text = document.createTextNode('Time has Finished')
+        h4.appendChild(h4Text)
+
+        let a = document.createElement('a')
+        let aText = document.createTextNode('Exit')
+        a.appendChild(aText)
+        a.className = 'btn btn-danger'
+        a.href = 'start/letters.html'
+
+        timer.appendChild(span)
+        timer.appendChild(h4)
+        timer.appendChild(a)
+
+
+        document.querySelector('.overlay').style.top = 0
+
+
+        setTimeout(function () {
+            window.location.href = 'start/letters.html'
+        }, 3000)
+
+
+
+
+    }
+}, 1000)
+
+
+
+
+
+
 function allowDrop(event) {
     event.preventDefault();
 }
@@ -386,6 +473,7 @@ function wrongAnswer() {
         overlayWrong.style.top = '-100%'
     }, 2000)
 }
+
 
 
 

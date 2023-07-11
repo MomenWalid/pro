@@ -36,6 +36,46 @@ ul {
   font-size: 25px;
 }
 
+.training .timer {
+  background-color: #fff;
+  width: fit-content;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 10px;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
+.training .timer.finish {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 70px;
+}
+
+@media (max-width: 767px) {
+  .training .timer {
+    font-size: 20px;
+    padding: 10px;
+    left: 5px;
+    top: 20px;
+  }
+  .training .timer.finish {
+    width: 300px;
+  }
+  .training .timer.finish h4 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
 .training ul {
   list-style: arabic-indic;
 }
