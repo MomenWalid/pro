@@ -263,6 +263,13 @@ nav h1 {
   }
 }
 
+@media (max-width: 991px) {
+  .news-details .details .box .heading {
+    flex-direction: column;
+    gap: 0 !important;
+  }
+}
+
 /* End News */
 
 /* Footer */

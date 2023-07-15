@@ -620,6 +620,18 @@ nav h1 {
   border: 1px solid var(--main-color);
 }
 
+@media (max-width: 768px) {
+  .content .col-md-9 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 991px) {
+  .content {
+    justify-content: center;
+  }
+}
+
 .lesson-content .activities {
   display: none;
 }

@@ -13,11 +13,18 @@ document.addEventListener("contextmenu", function (e) {
 
 document.addEventListener("copy", function (e) {
     e.preventDefault();
+    alert('dont try to Copy')
 });
 
 document.addEventListener("paste", function (e) {
     e.preventDefault();
+    alert('dont try to Paste')
 });
+
+document.addEventListener("visibilitychange", () => {
+    alert('dont leave')
+});
+
 
 
 
