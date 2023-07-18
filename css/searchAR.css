@@ -30,6 +30,11 @@ ul {
   margin: 0;
 }
 
+.dropdown-menu[data-bs-popper] {
+  right: 0;
+  left: auto;
+}
+
 /* navbar */
 header {
   position: fixed;
@@ -65,6 +70,11 @@ header nav .dropdown-menu {
   background-color: transparent;
 }
 
+header .buttons {
+  gap: 10px;
+  padding: 10px;
+}
+
 .search {
   position: relative;
   width: 120px;
@@ -74,7 +84,7 @@ header nav .dropdown-menu {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
-  right: 5px;
+  right: 72%;
   top: 4px;
   background-color: var(--main-color);
   width: 30px;
@@ -87,17 +97,12 @@ header nav .dropdown-menu {
   cursor: pointer;
 }
 
-.ar.search::after {
-  right: 72%;
-}
-
 .search:hover:after {
   background-color: var(--second-color);
 }
 
 .log,
 .lang {
-  margin-left: 10px;
   background-color: var(--main-color);
   border-radius: 25px;
   color: #fff;
