@@ -13,13 +13,9 @@ body {
 :root {
   --main-color: #2196f3;
   --main-alt-color: #1787e0;
-
   --second-color: #19283f;
-
   --section-color: #eee;
-
   --padding-section: 50px 0;
-
   --transition: 0.5s ease-in-out;
 }
 
@@ -114,8 +110,7 @@ ul {
   border-radius: 20px;
   font-size: 20px;
   transition: 0.3s;
-  margin-top: 10px;
-  margin-left: 0;
+  margin-left: 10px;
 }
 
 .header .lang:hover {
@@ -174,6 +169,7 @@ ul {
   .header .lang {
     display: block;
     width: fit-content;
+    margin: 10px 0 0;
   }
 
   .header button.open + nav {
@@ -289,16 +285,21 @@ ul {
 
 /* Start Lessons */
 .lesson {
-  background-color: var(--main-color);
   position: relative;
 }
 
+.lesson .container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
 .lesson h1 {
-  color: #f4b081;
+  color: var(--main-color);
 }
 
 .lesson .brd {
-  border: 1px solid #fff;
+  border: 1px solid var(--main-color);
   border-radius: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -307,11 +308,23 @@ ul {
 .lesson .content .box {
   height: 100vh;
   overflow-y: scroll;
+  padding: 15px;
+}
+
+.lesson .col-md-3,
+.lesson .col-md-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.lesson .content .box .menu1 ul,
+.lesson .content .menu2 .teach {
+  position: fixed;
 }
 
 .lesson .box::-webkit-scrollbar {
   width: 5px;
-  background-color: #fff;
+  background-color: #f1f5f9;
 }
 
 .lesson .box::-webkit-scrollbar-thumb {
@@ -322,7 +335,6 @@ ul {
   background-color: var(--main-color);
 }
 .lesson p {
-  color: #fff;
   margin: 20px 0;
 }
 
@@ -332,19 +344,13 @@ ul {
   margin-bottom: 20px;
 }
 
-.lesson .content span {
-  display: block;
-  height: 250px;
-  border: 1px solid #fff;
-  border-radius: 20px;
-}
-
 .lesson .content .box ul a,
 .lesson .content ul a {
   display: block;
   text-align: center;
   background-color: #ecf1f9;
   color: #000;
+  width: 120px;
   padding: 5px;
   margin-bottom: 15px;
   border-radius: 5px;
@@ -359,12 +365,12 @@ ul {
 
 .lesson .menu1 .toggle1,
 .lesson .menu2 .toggle2 {
-  position: absolute;
+  position: fixed;
   left: 0;
   width: fit-content;
   border: none;
-  background-color: #fff;
-  color: var(--main-color);
+  background-color: var(--main-color);
+  color: #fff;
   font-size: 20px;
   padding: 10px;
   display: none;

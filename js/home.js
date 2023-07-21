@@ -1,4 +1,3 @@
-
 let pag = document.querySelector('.slider .pagination')
 let slider = document.querySelectorAll('.slider .row');
 let spanPag = Array.from(document.querySelectorAll('.slider .pagination span'))
@@ -90,14 +89,14 @@ setInterval(() => {
 
 
 
-let up = document.querySelector(".up");
+let scrollUp = document.querySelector(".up");
 
-if (up) {
+if (scrollUp) {
     window.onscroll = function () {
-        this.scrollY >= 1000 ? up.classList.add("show") : up.classList.remove("show");
+        this.scrollY >= 1000 ? scrollUp.classList.add("show") : scrollUp.classList.remove("show");
     };
 
-    up.onclick = function () {
+    scrollUp.onclick = function () {
         window.scrollTo({
             top: 0,
             behavior: "smooth",

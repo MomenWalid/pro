@@ -288,6 +288,7 @@ header .buttons {
 .products .box {
   position: relative;
   overflow: hidden;
+  margin: 15px 0;
 }
 
 .products .box::before {
